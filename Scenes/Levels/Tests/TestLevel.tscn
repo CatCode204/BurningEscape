@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d4ckt2ivix1yi"]
+
+[ext_resource type="PackedScene" uid="uid://dxvoou1mm281t" path="res://Scenes/LevelBase/LevelBase.tscn" id="1_wp2df"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wp2df"]
+size = Vector3(50, 0.5, 50)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_wp2df"]
+
+[node name="LevelBase" unique_id=230083149 instance=ExtResource("1_wp2df")]
+
+[node name="Player" parent="." index="0" unique_id=1100323496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1347352, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="0" unique_id=20207754]
+mesh = SubResource("BoxMesh_wp2df")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="1" unique_id=889421381]
+shape = SubResource("WorldBoundaryShape3D_wp2df")

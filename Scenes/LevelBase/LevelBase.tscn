@@ -1,5 +1,29 @@
 [gd_scene format=3 uid="uid://dxvoou1mm281t"]
 
+[ext_resource type="PackedScene" uid="uid://biflcnb8xmo0b" path="res://Scenes/Player/Player.tscn" id="1_5ufo3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5ufo3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_bgw71"]
+sky_material = SubResource("ProceduralSkyMaterial_5ufo3")
+
+[sub_resource type="Environment" id="Environment_78m1b"]
+background_mode = 2
+sky = SubResource("Sky_bgw71")
+tonemap_mode = 2
+glow_enabled = true
+
 [node name="LevelBase" type="Node3D" unique_id=230083149]
 
-[node name="Map" type="Node3D" parent="." unique_id=2070588814]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=926314339]
+environment = SubResource("Environment_78m1b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1845391249]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=1100323496 instance=ExtResource("1_5ufo3")]
+
+[node name="Map" type="StaticBody3D" parent="." unique_id=230124054]

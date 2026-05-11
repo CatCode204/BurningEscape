@@ -6,8 +6,10 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h54ih"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1100323496]
+[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye")]
 script = ExtResource("1_s0eop")
+_head = NodePath("Head")
+_eye = NodePath("Head/Eye")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815320452]
 shape = SubResource("CapsuleShape3D_ft8w5")
@@ -16,5 +18,7 @@ shape = SubResource("CapsuleShape3D_ft8w5")
 visible = false
 mesh = SubResource("CapsuleMesh_h54ih")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1988432482]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44438165, 0)
+[node name="Head" type="Node3D" parent="." unique_id=1614117358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49247277, 0)
+
+[node name="Eye" type="Camera3D" parent="Head" unique_id=1988432482]

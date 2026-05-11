@@ -1,15 +1,89 @@
 extends CharacterBody3D
 
-# ALl player script goes here
-@export var _move_speed : float = 5.0;
+const ACTION_MOVE_FOWARD : String = "move_foward";
+const ACTION_MOVE_BACKWAD : String = "move_backward";
+const ACTION_MOVE_LEFT : String = "move_left";
+const ACTION_MOVE_RIGHT : String = "move_right";
+const ACTION_MOVE_JUMP : String = "move_jump";
+const ACTION_MOVE_SPRINT : String = "move_sprint";
+
+@export_group("Movement")
+@export var _walk_speed : float = 5.0;
 @export var _sprint_speed : float = 8.0;
-@export var _accelerate_speed : float = 0.2;
-@export var _deccelerate_speed : float = 1;
+@export var _jump_velocity : float = 4.8;
+@export var _sensitivity = 0.004
 
-# Called when the node enters the scene tree for the first time.
+@export_group("Bob")
+@export var _bob_freq : float = 2.4;
+@export var _bob_amp : float = 0.08;
+
+@export_group("FOV")
+@export var _base_fov = 75.0;
+@export var _fov_change = 1.5;
+
+@export_group("Nodes")
+@export var _head : Node3D;
+@export var _eye : Camera3D;
+
+var _current_speed : float = 0.0;
+var _t_bob : float = 0.0;
+
+const GRAVITY : float = 9.8;
+
 func _ready() -> void:
-	pass # Replace with function body.
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
+		_head.rotate_y(- event.relative.x * _sensitivity);
+		_eye.rotate_x(-event.relative.y * _sensitivity);
+		_eye.rotation.x = clamp(_eye.rotation.x, deg_to_rad(-40), deg_to_rad(60));
+
+func _handle_movement(delta : float):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y -= GRAVITY * delta
+
+	# Handle Jump.
+	if Input.is_action_just_pressed(ACTION_MOVE_JUMP) and is_on_floor():
+		velocity.y = _jump_velocity
+	
+	# Handle Sprint.
+	if Input.is_action_pressed(ACTION_MOVE_SPRINT):
+		_current_speed = _sprint_speed
+	else:
+		_current_speed = _walk_speed
+
+	# Get the input direction and handle the movement/deceleration.
+	var input_dir = Input.get_vector(ACTION_MOVE_LEFT, ACTION_MOVE_RIGHT, ACTION_MOVE_FOWARD, ACTION_MOVE_BACKWAD)
+	var direction = (_head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if is_on_floor():
+		if direction:
+			velocity.x = direction.x * _current_speed
+			velocity.z = direction.z * _current_speed
+		else:
+			velocity.x = lerp(velocity.x, direction.x * _current_speed, delta * 7.0)
+			velocity.z = lerp(velocity.z, direction.z * _current_speed, delta * 7.0)
+	else:
+		velocity.x = lerp(velocity.x, direction.x * _current_speed, delta * 3.0)
+		velocity.z = lerp(velocity.z, direction.z * _current_speed, delta * 3.0)
+	
+	# Head bob
+	_t_bob += delta * velocity.length() * float(is_on_floor())
+	_eye.transform.origin = _headbob(_t_bob)
+	
+	# FOV
+	var velocity_clamped = clamp(velocity.length(), 0.5, _sprint_speed * 2)
+	var target_fov =_base_fov + _fov_change * velocity_clamped
+	_eye.fov = lerp(_eye.fov, target_fov, delta * 8.0)
+
+func _physics_process(delta : float):
+	_handle_movement(delta)
+	move_and_slide()
+
+
+func _headbob(time) -> Vector3:
+	var pos = Vector3.ZERO
+	pos.y = sin(time * _bob_freq) * _bob_amp
+	pos.x = cos(time * _bob_freq / 2) * _bob_amp
+	return pos

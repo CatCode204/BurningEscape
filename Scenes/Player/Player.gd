@@ -24,6 +24,7 @@ const ACTION_MOVE_SPRINT : String = "move_sprint";
 @export_group("Nodes")
 @export var _head : Node3D;
 @export var _eye : Camera3D;
+@export var _blurPostProcessNode : ColorRect;
 
 var _current_speed : float = 0.0;
 var _t_bob : float = 0.0;
@@ -31,6 +32,7 @@ var _t_bob : float = 0.0;
 const GRAVITY : float = 9.8;
 
 func _ready() -> void:
+	_set_blur(0.0)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 
 func _unhandled_input(event):
@@ -81,6 +83,9 @@ func _physics_process(delta : float):
 	_handle_movement(delta)
 	move_and_slide()
 
+func _set_blur(blur_value : float):
+	var mat : ShaderMaterial = _blurPostProcessNode.material as ShaderMaterial;
+	mat.set_shader_parameter("blur_amount", blur_value)
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO

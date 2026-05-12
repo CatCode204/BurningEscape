@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://biflcnb8xmo0b"]
 
 [ext_resource type="Script" uid="uid://1jwiqp0pjlts" path="res://Scenes/Player/Player.gd" id="1_s0eop"]
+[ext_resource type="Shader" uid="uid://bg6c7m1dh5g3i" path="res://Resources/Shaders/Blur.gdshader" id="2_ft8w5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ft8w5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h54ih"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ft8w5"]
+shader = ExtResource("2_ft8w5")
+shader_parameter/blur_amount = 1.8000000855
+
+[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode")]
 script = ExtResource("1_s0eop")
 _head = NodePath("Head")
 _eye = NodePath("Head/Eye")
+_blurPostProcessNode = NodePath("CanvasLayer/ColorRect")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815320452]
 shape = SubResource("CapsuleShape3D_ft8w5")
@@ -22,3 +28,14 @@ mesh = SubResource("CapsuleMesh_h54ih")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49247277, 0)
 
 [node name="Eye" type="Camera3D" parent="Head" unique_id=1988432482]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=132312822]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1800009015]
+material = SubResource("ShaderMaterial_ft8w5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

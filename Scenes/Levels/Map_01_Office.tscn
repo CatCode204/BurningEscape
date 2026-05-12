@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://xolbnb3idd6h"]
+
+[ext_resource type="ArrayMesh" uid="uid://bsfgw4fcp8yly" path="res://Assets/modular_house_collection/Prop_Bathroom_Shower.obj" id="1_enh3m"]
+
+[node name="Map_01_Office" type="Node3D" unique_id=2066118012]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=154772387]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=552317128]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 10, 0)
+light_energy = 1.5
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1022563445]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 18, 26)
+current = true
+fov = 65.0
+
+[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=1121427972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 11.5)
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1267584862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+use_collision = true
+size = Vector3(40, 0.2, 28)
+
+[node name="NorthWall" type="CSGBox3D" parent="." unique_id=885621045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -13.8)
+use_collision = true
+size = Vector3(40, 3.2, 0.4)
+
+[node name="SouthWallLeft" type="CSGBox3D" parent="." unique_id=992350511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, 1.6, 13.8)
+use_collision = true
+size = Vector3(17.6, 3.2, 0.4)
+
+[node name="SouthWallRight" type="CSGBox3D" parent="." unique_id=1998227695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2, 1.6, 13.8)
+use_collision = true
+size = Vector3(17.6, 3.2, 0.4)
+
+[node name="WestWall" type="CSGBox3D" parent="." unique_id=2121531928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8, 1.6, 0)
+use_collision = true
+size = Vector3(0.4, 3.2, 28)
+
+[node name="EastWall" type="CSGBox3D" parent="." unique_id=1681151165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8, 1.6, 0)
+use_collision = true
+size = Vector3(0.4, 3.2, 28)
+
+[node name="LobbyWallLeft" type="CSGBox3D" parent="." unique_id=427530022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1.6, 8)
+use_collision = true
+size = Vector3(18, 3.2, 0.3)
+
+[node name="LobbyWallRight" type="CSGBox3D" parent="." unique_id=1293235421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1.6, 8)
+use_collision = true
+size = Vector3(18, 3.2, 0.3)
+
+[node name="LeftOfficePartitionUpper" type="CSGBox3D" parent="." unique_id=569595006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.6, 4.5)
+use_collision = true
+size = Vector3(0.3, 3.2, 7)
+
+[node name="LeftOfficePartitionLower" type="CSGBox3D" parent="." unique_id=1074705855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.6, -5)
+use_collision = true
+size = Vector3(0.3, 3.2, 10)
+
+[node name="RightCorridorWall_01" type="CSGBox3D" parent="." unique_id=1529538169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6, 6.9)
+use_collision = true
+size = Vector3(0.3, 3.2, 2.2)
+
+[node name="RightCorridorWall_02" type="CSGBox3D" parent="." unique_id=1657816858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6, 1.5)
+use_collision = true
+size = Vector3(0.3, 3.2, 5.4)
+
+[node name="RightCorridorWall_03" type="CSGBox3D" parent="." unique_id=1666038309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6, -5.5)
+use_collision = true
+size = Vector3(0.3, 3.2, 5.4)
+
+[node name="RightCorridorWall_04" type="CSGBox3D" parent="." unique_id=2131656983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6, -10.9)
+use_collision = true
+size = Vector3(0.3, 3.2, 2.2)
+
+[node name="MeetingRoom_BackWall" type="CSGBox3D" parent="." unique_id=485380856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9, 1.6, 0.8)
+use_collision = true
+size = Vector3(15.8, 3.2, 0.3)
+
+[node name="OfficeWing_BackWall" type="CSGBox3D" parent="." unique_id=1024858468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9, 1.6, -6)
+use_collision = true
+size = Vector3(15.8, 3.2, 0.3)
+
+[node name="PantryRestroom_BackWall" type="CSGBox3D" parent="." unique_id=1556008117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9, 1.6, -10)
+use_collision = true
+size = Vector3(15.8, 3.2, 0.3)
+
+[node name="RightWing_VerticalSplit" type="CSGBox3D" parent="." unique_id=1131680146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.6, -4.6)
+use_collision = true
+size = Vector3(0.3, 3.2, 10.8)
+
+[node name="PantryRestroom_Split" type="CSGBox3D" parent="." unique_id=911007475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.6, -11.9)
+use_collision = true
+size = Vector3(0.3, 3.2, 3.8)
+
+[node name="LeftOpenOffice_BackWall" type="CSGBox3D" parent="." unique_id=978748208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.6, -6)
+use_collision = true
+size = Vector3(15.6, 3.2, 0.3)
+
+[node name="LeftBackRoom_Split" type="CSGBox3D" parent="." unique_id=677071941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1.6, -10.1)
+use_collision = true
+size = Vector3(0.3, 3.2, 7.4)
+
+[node name="PropBathroomShower" type="MeshInstance3D" parent="." unique_id=1177367659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8348732, 0, -21.377806)
+mesh = ExtResource("1_enh3m")

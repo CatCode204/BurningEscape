@@ -32,7 +32,6 @@ var _t_bob : float = 0.0;
 const GRAVITY : float = 9.8;
 
 func _ready() -> void:
-	_set_blur(0.0)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 
 func _unhandled_input(event):

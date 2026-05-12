@@ -23,6 +23,17 @@ GameManager="*uid://dw4yoftus3npv"
 
 window/stretch/mode="canvas_items"
 
+[file_customization]
+
+folder_colors={
+"res://Addons/": "red",
+"res://Assets/": "orange",
+"res://Classes/": "yellow",
+"res://Materials/": "green",
+"res://Resources/": "blue",
+"res://Scenes/": "purple"
+}
+
 [input]
 
 move_foward={

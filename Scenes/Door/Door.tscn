@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jnrd2nxw8hnu" path="res://Scenes/Door/Door.gd" id="1_cisc1"]
 [ext_resource type="ArrayMesh" uid="uid://hfr1xj0obpoc" path="res://Assets/Models/modular_house_collection/Structure_Wall_Door.obj" id="1_w2t8u"]
+[ext_resource type="Script" uid="uid://4efbjxque6y5" path="res://Classes/Interactables/Interactable.gd" id="3_interact"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w2t8u"]
 size = Vector3(0.8079529, 1.8989258, 0.10546875)
@@ -12,8 +13,7 @@ size = Vector3(1.5653076, 1.8983765, 1.3828125)
 [node name="Door" type="AnimatableBody3D" unique_id=1653197861]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_cisc1")
-_movement_direction = null
-_door_size = null
+_door_type = 1
 close_time = 1.0
 _speed = 1.5
 _transition = 5
@@ -29,9 +29,12 @@ shape = SubResource("BoxShape3D_w2t8u")
 
 [node name="DoorInteractArea" type="Area3D" parent="." unique_id=1920677482]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5014223, 0, 0)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("3_interact")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorInteractArea" unique_id=1348943805]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070617676, 0.95080566, 0.010245207)
 shape = SubResource("BoxShape3D_cisc1")
 
-[connection signal="body_entered" from="DoorInteractArea" to="." method="_on_door_interact_area_body_entered"]
+[connection signal="interacted" from="DoorInteractArea" to="." method="_on_door_interacted"]

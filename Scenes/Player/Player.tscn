@@ -56,28 +56,16 @@ height = 0.1
 shader = ExtResource("2_ft8w5")
 shader_parameter/blur_amount = 0.0
 
-<<<<<<< HEAD
-[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_interact_raycast", "_extinguisher_model", "_foam_particles", "_sub_view_port", "_model_view_camera")]
-=======
 [node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_interact_raycast", "_extinguisher_model", "_foam_particles")]
->>>>>>> 5fdce7824aa51d9d02bf1ce72f23ce5318358481
 script = ExtResource("1_s0eop")
 _head = NodePath("Head")
 _eye = NodePath("Head/Eye")
 _blurPostProcessNode = NodePath("CanvasLayer/ColorRect")
-<<<<<<< HEAD
-_interact_raycast = NodePath("Head/Eye/InteractRaycast")
-_extinguisher_model = NodePath("Head/Eye/Hand/ExtinguisherModel")
-_foam_particles = NodePath("Head/Eye/Hand/ExtinguisherModel/FoamParticles")
-_sub_view_port = NodePath("Head/Eye/SubViewportContainer/SubViewport")
-_model_view_camera = NodePath("Head/Eye/SubViewportContainer/SubViewport/ModelViewCamera")
-=======
 _sub_view_port = NodePath("Head/Eye/SubViewportContainer/SubViewport")
 _model_view_camera = NodePath("Head/Eye/SubViewportContainer/SubViewport/ModelViewCamera")
 _interact_raycast = NodePath("Head/Eye/InteractRaycast")
 _extinguisher_model = NodePath("Head/Eye/Hand/ExtinguisherModel")
 _foam_particles = NodePath("Head/Eye/Hand/ExtinguisherModel/FoamParticles")
->>>>>>> 5fdce7824aa51d9d02bf1ce72f23ce5318358481
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815320452]
 shape = SubResource("CapsuleShape3D_ft8w5")

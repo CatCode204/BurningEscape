@@ -24,7 +24,10 @@ GameManager="*uid://dw4yoftus3npv"
 
 window/stretch/mode="canvas_items"
 
-<<<<<<< HEAD
+[dotnet]
+
+project/assembly_name="BurningEscape"
+
 [file_customization]
 
 folder_colors={
@@ -39,11 +42,6 @@ folder_colors={
 [global_group]
 
 PlayerGroup=""
-=======
-[dotnet]
-
-project/assembly_name="BurningEscape"
->>>>>>> inventory
 
 [input]
 

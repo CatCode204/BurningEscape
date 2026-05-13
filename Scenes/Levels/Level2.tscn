@@ -760,6 +760,7 @@ shape = SubResource("BoxShape_Outer_South_Left_Of_Garage_Door")
 transform = Transform3D(-5.3010922e-08, 0, 1, 0, 0.43148538, 0, -1.2127485, 0, -4.371139e-08, 1.9734449, 2.4638426, 3.0225308)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Left_Of_Garage_Door5" index="0" unique_id=1211727931]
+transform = Transform3D(1, 0, -2.1316282e-14, 0, 1, 0, 2.1316282e-14, 0, 1, 0, 0.058695316, 0)
 mesh = SubResource("BoxMesh_Outer_South_Left_Of_Garage_Door")
 surface_material_override/0 = SubResource("MatWall")
 
@@ -796,7 +797,17 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Left_Of_Garage_Door4" index="1" unique_id=652096853]
 shape = SubResource("BoxShape_Outer_South_Left_Of_Garage_Door")
 
-[node name="Outer_South_Between_Garage_And_Main_Entrance" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="17" unique_id=1522444377]
+[node name="Outer_South_Left_Of_Garage_Door8" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="17" unique_id=1135760647]
+transform = Transform3D(1.2127485, 0, 0, 0, 0.43148538, 0, 0, 0, 1, -10.66456, 2.4638426, -2.574318)
+
+[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Left_Of_Garage_Door8" index="0" unique_id=1174263820]
+mesh = SubResource("BoxMesh_Outer_South_Left_Of_Garage_Door")
+surface_material_override/0 = SubResource("MatWall")
+
+[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Left_Of_Garage_Door8" index="1" unique_id=860773696]
+shape = SubResource("BoxShape_Outer_South_Left_Of_Garage_Door")
+
+[node name="Outer_South_Between_Garage_And_Main_Entrance" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="18" unique_id=1522444377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1.5, -11.4)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Between_Garage_And_Main_Entrance" index="0" unique_id=1436100973]
@@ -806,7 +817,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Between_Garage_And_Main_Entrance" index="1" unique_id=1430920551]
 shape = SubResource("BoxShape_Outer_South_Between_Garage_And_Main_Entrance")
 
-[node name="Outer_South_Right_Of_Main_Entrance" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="18" unique_id=1285387579]
+[node name="Outer_South_Right_Of_Main_Entrance" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="19" unique_id=1285387579]
 transform = Transform3D(3.1211057, 0, 0, 0, 1, 0, 0, 0, 1, 10.914194, 1.5, -11.4)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Right_Of_Main_Entrance" index="0" unique_id=2032759706]
@@ -817,7 +828,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_South_Right_Of_Main_Entrance" index="1" unique_id=1015052605]
 shape = SubResource("BoxShape_Outer_South_Right_Of_Main_Entrance")
 
-[node name="Outer_West_Below_Garage_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="19" unique_id=85249346]
+[node name="Outer_West_Below_Garage_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="20" unique_id=85249346]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 1.5, -11)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Below_Garage_Window" index="0" unique_id=1457127987]
@@ -827,7 +838,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Below_Garage_Window" index="1" unique_id=361529742]
 shape = SubResource("BoxShape_Outer_West_Below_Garage_Window")
 
-[node name="Window_Garage_West_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="20" unique_id=98351239]
+[node name="Window_Garage_West_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="21" unique_id=98351239]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 0.6, -9.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Garage_West_Lower_Wall" index="0" unique_id=1270809322]
@@ -837,7 +848,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Garage_West_Lower_Wall" index="1" unique_id=929071382]
 shape = SubResource("BoxShape_Window_Garage_West_Lower_Wall")
 
-[node name="Window_Garage_West_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="21" unique_id=290222902]
+[node name="Window_Garage_West_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="22" unique_id=290222902]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 2.7, -9.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Garage_West_Upper_Wall" index="0" unique_id=1828050090]
@@ -847,7 +858,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Garage_West_Upper_Wall" index="1" unique_id=342864309]
 shape = SubResource("BoxShape_Window_Garage_West_Upper_Wall")
 
-[node name="Outer_West_Between_Garage_And_Bedroom2_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="22" unique_id=835116523]
+[node name="Outer_West_Between_Garage_And_Bedroom2_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="23" unique_id=835116523]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 1.5, -7.25)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Between_Garage_And_Bedroom2_Window" index="0" unique_id=363123008]
@@ -857,7 +868,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Between_Garage_And_Bedroom2_Window" index="1" unique_id=1502458902]
 shape = SubResource("BoxShape_Outer_West_Between_Garage_And_Bedroom2_Window")
 
-[node name="Window_Bedroom2_West_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="23" unique_id=1994500606]
+[node name="Window_Bedroom2_West_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="24" unique_id=1994500606]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 0.6, -5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Bedroom2_West_Lower_Wall" index="0" unique_id=152020638]
@@ -867,7 +878,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Bedroom2_West_Lower_Wall" index="1" unique_id=301681145]
 shape = SubResource("BoxShape_Window_Bedroom2_West_Lower_Wall")
 
-[node name="Window_Bedroom2_West_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="24" unique_id=78284195]
+[node name="Window_Bedroom2_West_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="25" unique_id=78284195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 2.7, -5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Bedroom2_West_Upper_Wall" index="0" unique_id=835155628]
@@ -877,7 +888,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Bedroom2_West_Upper_Wall" index="1" unique_id=499991110]
 shape = SubResource("BoxShape_Window_Bedroom2_West_Upper_Wall")
 
-[node name="Outer_West_Between_Bedroom2_And_MainHall_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="25" unique_id=438133727]
+[node name="Outer_West_Between_Bedroom2_And_MainHall_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="26" unique_id=438133727]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 1.5, -2.25)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Between_Bedroom2_And_MainHall_Window" index="0" unique_id=1477556961]
@@ -887,7 +898,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Between_Bedroom2_And_MainHall_Window" index="1" unique_id=1096762805]
 shape = SubResource("BoxShape_Outer_West_Between_Bedroom2_And_MainHall_Window")
 
-[node name="Window_MainHall_West_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="26" unique_id=1347015002]
+[node name="Window_MainHall_West_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="27" unique_id=1347015002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 0.6, 1)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_MainHall_West_Lower_Wall" index="0" unique_id=2111241274]
@@ -897,7 +908,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_MainHall_West_Lower_Wall" index="1" unique_id=1082852052]
 shape = SubResource("BoxShape_Window_MainHall_West_Lower_Wall")
 
-[node name="Window_MainHall_West_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="27" unique_id=931159900]
+[node name="Window_MainHall_West_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="28" unique_id=931159900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 2.7, 1)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_MainHall_West_Upper_Wall" index="0" unique_id=472621861]
@@ -907,7 +918,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_MainHall_West_Upper_Wall" index="1" unique_id=943091829]
 shape = SubResource("BoxShape_Window_MainHall_West_Upper_Wall")
 
-[node name="Outer_West_Above_MainHall_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="28" unique_id=1822555261]
+[node name="Outer_West_Above_MainHall_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="29" unique_id=1822555261]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9, 1.5, 7)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Above_MainHall_Window" index="0" unique_id=722525400]
@@ -917,7 +928,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_West_Above_MainHall_Window" index="1" unique_id=312380431]
 shape = SubResource("BoxShape_Outer_West_Above_MainHall_Window")
 
-[node name="Outer_East_Below_Living_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="29" unique_id=21581857]
+[node name="Outer_East_Below_Living_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="30" unique_id=21581857]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9, 1.5, -10)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_East_Below_Living_Window" index="0" unique_id=449985605]
@@ -927,7 +938,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_East_Below_Living_Window" index="1" unique_id=1114051802]
 shape = SubResource("BoxShape_Outer_East_Below_Living_Window")
 
-[node name="Window_Living_East_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="30" unique_id=19003840]
+[node name="Window_Living_East_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="31" unique_id=19003840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9, 0.6, -6.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Living_East_Lower_Wall" index="0" unique_id=1871342236]
@@ -937,7 +948,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Living_East_Lower_Wall" index="1" unique_id=980024]
 shape = SubResource("BoxShape_Window_Living_East_Lower_Wall")
 
-[node name="Window_Living_East_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="31" unique_id=42263651]
+[node name="Window_Living_East_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="32" unique_id=42263651]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9, 2.7, -6.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Living_East_Upper_Wall" index="0" unique_id=2024872605]
@@ -947,7 +958,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Living_East_Upper_Wall" index="1" unique_id=144581375]
 shape = SubResource("BoxShape_Window_Living_East_Upper_Wall")
 
-[node name="Outer_East_Between_Living_And_Kitchen_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="32" unique_id=468695481]
+[node name="Outer_East_Between_Living_And_Kitchen_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="33" unique_id=468695481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9, 1.5, 0.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_East_Between_Living_And_Kitchen_Window" index="0" unique_id=1079721659]
@@ -957,7 +968,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_East_Between_Living_And_Kitchen_Window" index="1" unique_id=361952731]
 shape = SubResource("BoxShape_Outer_East_Between_Living_And_Kitchen_Window")
 
-[node name="Window_Kitchen_East_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="33" unique_id=245512793]
+[node name="Window_Kitchen_East_Lower_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="34" unique_id=245512793]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9, 0.6, 7.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Kitchen_East_Lower_Wall" index="0" unique_id=969279050]
@@ -967,7 +978,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Kitchen_East_Lower_Wall" index="1" unique_id=695783637]
 shape = SubResource("BoxShape_Window_Kitchen_East_Lower_Wall")
 
-[node name="Window_Kitchen_East_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="34" unique_id=1710216013]
+[node name="Window_Kitchen_East_Upper_Wall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="35" unique_id=1710216013]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9, 2.7, 7.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Kitchen_East_Upper_Wall" index="0" unique_id=1420323932]
@@ -977,7 +988,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Window_Kitchen_East_Upper_Wall" index="1" unique_id=491322900]
 shape = SubResource("BoxShape_Window_Kitchen_East_Upper_Wall")
 
-[node name="Outer_East_Above_Kitchen_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="35" unique_id=415014927]
+[node name="Outer_East_Above_Kitchen_Window" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="36" unique_id=415014927]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9, 1.5, 10.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_East_Above_Kitchen_Window" index="0" unique_id=1632491373]
@@ -987,7 +998,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Outer_East_Above_Kitchen_Window" index="1" unique_id=188747289]
 shape = SubResource("BoxShape_Outer_East_Above_Kitchen_Window")
 
-[node name="Inner_X10_Garage_Door_Lower_Piece" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="36" unique_id=1225484095]
+[node name="Inner_X10_Garage_Door_Lower_Piece" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="37" unique_id=1225484095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -11.25)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X10_Garage_Door_Lower_Piece" index="0" unique_id=1875446918]
@@ -997,7 +1008,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X10_Garage_Door_Lower_Piece" index="1" unique_id=1945912415]
 shape = SubResource("BoxShape_Inner_X10_Garage_Door_Lower_Piece")
 
-[node name="Inner_X10_Garage_Upper_To_Bedroom2" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="37" unique_id=1786048837]
+[node name="Inner_X10_Garage_Upper_To_Bedroom2" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="38" unique_id=1786048837]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, -5.25)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X10_Garage_Upper_To_Bedroom2" index="0" unique_id=1462718980]
@@ -1007,7 +1018,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X10_Garage_Upper_To_Bedroom2" index="1" unique_id=1585399001]
 shape = SubResource("BoxShape_Inner_X10_Garage_Upper_To_Bedroom2")
 
-[node name="Inner_X10_Bedroom1_Bath" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="38" unique_id=1669704542]
+[node name="Inner_X10_Bedroom1_Bath" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="39" unique_id=1669704542]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.5, 8)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X10_Bedroom1_Bath" index="0" unique_id=2015807682]
@@ -1017,7 +1028,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X10_Bedroom1_Bath" index="1" unique_id=947815575]
 shape = SubResource("BoxShape_Inner_X10_Bedroom1_Bath")
 
-[node name="Inner_X16_Hall_Kitchen_Door_Lower" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="39" unique_id=1729922756]
+[node name="Inner_X16_Hall_Kitchen_Door_Lower" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="40" unique_id=1729922756]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.2955494, 2, 1.5, -2.0621786)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X16_Hall_Kitchen_Door_Lower" index="0" unique_id=563939024]
@@ -1029,7 +1040,7 @@ surface_material_override/0 = SubResource("MatWall")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3838501)
 shape = SubResource("BoxShape_Inner_X16_Hall_Kitchen_Door_Lower")
 
-[node name="Inner_X16_Hall_Kitchen_Door_Upper" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="40" unique_id=1415148679]
+[node name="Inner_X16_Hall_Kitchen_Door_Upper" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="41" unique_id=1415148679]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 4)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X16_Hall_Kitchen_Door_Upper" index="0" unique_id=558050354]
@@ -1040,7 +1051,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X16_Hall_Kitchen_Door_Upper" index="1" unique_id=1231455413]
 shape = SubResource("BoxShape_Inner_X16_Hall_Kitchen_Door_Upper")
 
-[node name="Inner_X16_Bath_Kitchen" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="41" unique_id=551517489]
+[node name="Inner_X16_Bath_Kitchen" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="42" unique_id=551517489]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 8)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X16_Bath_Kitchen" index="0" unique_id=2138864174]
@@ -1050,7 +1061,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X16_Bath_Kitchen" index="1" unique_id=1158974744]
 shape = SubResource("BoxShape_Inner_X16_Bath_Kitchen")
 
-[node name="Inner_Y16_Bedroom1_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="42" unique_id=1273213858]
+[node name="Inner_Y16_Bedroom1_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="43" unique_id=1273213858]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.75, 1.5, 4.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bedroom1_Left" index="0" unique_id=929108928]
@@ -1060,7 +1071,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bedroom1_Left" index="1" unique_id=1475968940]
 shape = SubResource("BoxShape_Inner_Y16_Bedroom1_Left")
 
-[node name="Inner_Y16_Bedroom1_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="43" unique_id=668807544]
+[node name="Inner_Y16_Bedroom1_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="44" unique_id=668807544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 1.5, 4.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bedroom1_Right" index="0" unique_id=1483333252]
@@ -1076,7 +1087,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bedroom1_Right" index="2" unique_id=351645044]
 shape = SubResource("BoxShape_Inner_Y16_Bedroom1_Right")
 
-[node name="Inner_Y16_Bath_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="44" unique_id=2089907100]
+[node name="Inner_Y16_Bath_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="45" unique_id=2089907100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 1.5, 4.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bath_Left" index="0" unique_id=357199808]
@@ -1086,7 +1097,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bath_Left" index="1" unique_id=260758096]
 shape = SubResource("BoxShape_Inner_Y16_Bath_Left")
 
-[node name="Inner_Y16_Bath_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="45" unique_id=289710509]
+[node name="Inner_Y16_Bath_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="46" unique_id=289710509]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 1.5, 4.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bath_Right" index="0" unique_id=319287830]
@@ -1096,7 +1107,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y16_Bath_Right" index="1" unique_id=138007731]
 shape = SubResource("BoxShape_Inner_Y16_Bath_Right")
 
-[node name="Inner_Y9_Bedroom2_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="46" unique_id=1584249141]
+[node name="Inner_Y9_Bedroom2_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="47" unique_id=1584249141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.75, 1.5, -2.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Bedroom2_Left" index="0" unique_id=923736509]
@@ -1106,8 +1117,8 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Bedroom2_Left" index="1" unique_id=782990465]
 shape = SubResource("BoxShape_Inner_Y9_Bedroom2_Left")
 
-[node name="Inner_Y9_Bedroom2_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="47" unique_id=1895242045]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 1.5, -2.5)
+[node name="Inner_Y9_Bedroom2_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="48" unique_id=1895242045]
+transform = Transform3D(2.6906838, 0, 0, 0, 1, 0, 0, 0, 1, -7.305076, 1.5, -2.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Bedroom2_Right" index="0" unique_id=1749858995]
 mesh = SubResource("BoxMesh_Inner_Y9_Bedroom2_Right")
@@ -1116,7 +1127,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Bedroom2_Right" index="1" unique_id=633013101]
 shape = SubResource("BoxShape_Inner_Y9_Bedroom2_Right")
 
-[node name="Inner_Y9_Living_Door_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="48" unique_id=1587272322]
+[node name="Inner_Y9_Living_Door_Left" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="49" unique_id=1587272322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 1.5, -2.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Living_Door_Left" index="0" unique_id=1182504292]
@@ -1126,7 +1137,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Living_Door_Left" index="1" unique_id=492007902]
 shape = SubResource("BoxShape_Inner_Y9_Living_Door_Left")
 
-[node name="Inner_Y9_Living_Door_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="49" unique_id=1902312714]
+[node name="Inner_Y9_Living_Door_Right" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="50" unique_id=1902312714]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 1.5, -2.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Living_Door_Right" index="0" unique_id=1298204400]
@@ -1136,7 +1147,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Living_Door_Right" index="1" unique_id=1234782832]
 shape = SubResource("BoxShape_Inner_Y9_Living_Door_Right")
 
-[node name="Inner_Y9_Kitchen_Living_Separator" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="50" unique_id=173387615]
+[node name="Inner_Y9_Kitchen_Living_Separator" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="51" unique_id=173387615]
 transform = Transform3D(1.3566916, 0, 0, 0, 1, 0, 0, 0, 1, 5.438368, 1.5, -2.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Kitchen_Living_Separator" index="0" unique_id=2047147563]
@@ -1146,7 +1157,7 @@ surface_material_override/0 = SubResource("MatWall")
 [node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y9_Kitchen_Living_Separator" index="1" unique_id=1223695970]
 shape = SubResource("BoxShape_Inner_Y9_Kitchen_Living_Separator")
 
-[node name="Inner_Y4_Bedroom2_Garage" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="51" unique_id=737133488]
+[node name="Inner_Y4_Bedroom2_Garage" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="52" unique_id=737133488]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.5, -7.5)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_Y4_Bedroom2_Garage" index="0" unique_id=1974431537]
@@ -1603,3 +1614,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.521061, 0, -2.523909)
 
 [node name="Door5" parent="Map/Doors" index="6" unique_id=983025084 instance=ExtResource("22_tbesk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5069563, 0, -2.523909)
+
+[node name="InventoryUI" parent="HUD" parent_id_path=PackedInt32Array(99887766) index="0" unique_id=627306626]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" parent="HUD/InventoryUI" index="0" unique_id=129330921]
+grow_horizontal = 2
+grow_vertical = 2

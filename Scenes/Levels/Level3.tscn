@@ -32,6 +32,9 @@ size = Vector3(62, 7.2, 0.6)
 [sub_resource type="BoxMesh" id="MESH_WallShortSegment"]
 size = Vector3(0.6, 7.2, 40)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y77v7"]
+size = Vector3(0.650177, 7.0337524, 40.182983)
+
 [sub_resource type="BoxMesh" id="MESH_DoorLarge"]
 size = Vector3(52, 8.2, 0.55)
 
@@ -50,14 +53,14 @@ albedo_color = Color(0.02, 0.55, 0.82, 1)
 [sub_resource type="BoxMesh" id="MESH_PlaceHolder_B"]
 size = Vector3(28, 0.12, 15)
 
-[sub_resource type="StandardMaterial3D" id="MAT_Floor2"]
-albedo_color = Color(0.3, 0.31, 0.3, 1)
-
 [sub_resource type="BoxMesh" id="MESH_SupportPillar"]
 size = Vector3(4.2, 17.2, 4.2)
 
 [sub_resource type="StandardMaterial3D" id="MAT_SupportPillar"]
 albedo_color = Color(0.95, 0.05, 0.08, 1)
+
+[sub_resource type="StandardMaterial3D" id="MAT_Floor2"]
+albedo_color = Color(0.3, 0.31, 0.3, 1)
 
 [sub_resource type="CylinderMesh" id="MESH_PipeLongX"]
 top_radius = 0.28
@@ -106,524 +109,550 @@ size = Vector3(0.8, 13, 130)
 
 [node name="level3" unique_id=1825754528 instance=ExtResource("1_levelbase")]
 
-[node name="Floor1" type="Node3D" parent="." index="4" unique_id=876279563]
+[node name="Floor1" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="0" unique_id=876279563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.08027649)
 
-[node name="Floor" type="MeshInstance3D" parent="Floor1" index="0" unique_id=643089925]
+[node name="Floor" type="MeshInstance3D" parent="Map/Floor1" index="0" unique_id=643089925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
 mesh = SubResource("MESH_FactoryFloor")
 surface_material_override/0 = SubResource("MAT_Floor1")
 
-[node name="LayoutGuide" type="Node3D" parent="Floor1" index="1" unique_id=1780952045]
+[node name="LayoutGuide" type="Node3D" parent="Map/Floor1" index="1" unique_id=1780952045]
 
-[node name="MiddleSplitLine" type="MeshInstance3D" parent="Floor1/LayoutGuide" index="0" unique_id=1206709786]
+[node name="MiddleSplitLine" type="MeshInstance3D" parent="Map/Floor1/LayoutGuide" index="0" unique_id=1206709786]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.055, 0)
 mesh = SubResource("MESH_CentralLine")
 surface_material_override/0 = SubResource("MAT_Line")
 
-[node name="BayLine_X_Left" type="MeshInstance3D" parent="Floor1/LayoutGuide" index="1" unique_id=2147321612]
+[node name="BayLine_X_Left" type="MeshInstance3D" parent="Map/Floor1/LayoutGuide" index="1" unique_id=2147321612]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0.06, 0)
 mesh = SubResource("MESH_BayLine_X")
 surface_material_override/0 = SubResource("MAT_Line")
 
-[node name="BayLine_X_Middle" type="MeshInstance3D" parent="Floor1/LayoutGuide" index="2" unique_id=1213100056]
+[node name="BayLine_X_Middle" type="MeshInstance3D" parent="Map/Floor1/LayoutGuide" index="2" unique_id=1213100056]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
 mesh = SubResource("MESH_BayLine_X")
 surface_material_override/0 = SubResource("MAT_Line")
 
-[node name="BayLine_X_Right" type="MeshInstance3D" parent="Floor1/LayoutGuide" index="3" unique_id=1266087534]
+[node name="BayLine_X_Right" type="MeshInstance3D" parent="Map/Floor1/LayoutGuide" index="3" unique_id=1266087534]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0.06, 0)
 mesh = SubResource("MESH_BayLine_X")
 surface_material_override/0 = SubResource("MAT_Line")
 
-[node name="BayLine_Z_NorthHalf" type="MeshInstance3D" parent="Floor1/LayoutGuide" index="4" unique_id=318449930]
+[node name="BayLine_Z_NorthHalf" type="MeshInstance3D" parent="Map/Floor1/LayoutGuide" index="4" unique_id=318449930]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -30)
 mesh = SubResource("MESH_BayLine_Z")
 surface_material_override/0 = SubResource("MAT_Line")
 
-[node name="BayLine_Z_SouthHalf" type="MeshInstance3D" parent="Floor1/LayoutGuide" index="5" unique_id=348502871]
+[node name="BayLine_Z_SouthHalf" type="MeshInstance3D" parent="Map/Floor1/LayoutGuide" index="5" unique_id=348502871]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 30)
 mesh = SubResource("MESH_BayLine_Z")
 surface_material_override/0 = SubResource("MAT_Line")
 
-[node name="Walls" type="Node3D" parent="Floor1" index="2" unique_id=249386238]
+[node name="Walls" type="Node3D" parent="Map/Floor1" index="2" unique_id=249386238]
 
-[node name="NorthWall" type="MeshInstance3D" parent="Floor1/Walls" index="0" unique_id=406316503]
+[node name="NorthWall" type="MeshInstance3D" parent="Map/Floor1/Walls" index="0" unique_id=406316503]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6, -60)
 mesh = SubResource("MESH_WallLongFull")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="SouthWall_Left" type="MeshInstance3D" parent="Floor1/Walls" index="1" unique_id=1141587966]
+[node name="SouthWall_Left" type="MeshInstance3D" parent="Map/Floor1/Walls" index="1" unique_id=1141587966]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 3.6, 60)
 mesh = SubResource("MESH_WallLongSegment")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="SouthWall_Right" type="MeshInstance3D" parent="Floor1/Walls" index="2" unique_id=1012879766]
+[node name="SouthWall_Right" type="MeshInstance3D" parent="Map/Floor1/Walls" index="2" unique_id=1012879766]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 3.6, 60)
 mesh = SubResource("MESH_WallLongSegment")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="WestWall_North" type="MeshInstance3D" parent="Floor1/Walls" index="3" unique_id=1527551667]
+[node name="WestWall_North" type="MeshInstance3D" parent="Map/Floor1/Walls" index="3" unique_id=1527551667]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 3.6, -40)
 mesh = SubResource("MESH_WallShortSegment")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="WestWall_South" type="MeshInstance3D" parent="Floor1/Walls" index="4" unique_id=1398955663]
+[node name="WestWall_South" type="MeshInstance3D" parent="Map/Floor1/Walls" index="4" unique_id=1398955663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, 3.6, 40)
 mesh = SubResource("MESH_WallShortSegment")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="EastWall_North" type="MeshInstance3D" parent="Floor1/Walls" index="5" unique_id=312083737]
+[node name="EastWall_North" type="StaticBody3D" parent="Map/Floor1/Walls" index="5" unique_id=1380580324]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 3.6, -40)
+
+[node name="MeshInstance" type="MeshInstance3D" parent="Map/Floor1/Walls/EastWall_North" index="0" unique_id=312083737]
 mesh = SubResource("MESH_WallShortSegment")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="EastWall_South" type="MeshInstance3D" parent="Floor1/Walls" index="6" unique_id=1773112662]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 3.6, 40)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Floor1/Walls/EastWall_North" index="1" unique_id=399529962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003921509, 0.024261475, -0.082092285)
+shape = SubResource("BoxShape3D_y77v7")
+
+[node name="EastWall_North2" type="StaticBody3D" parent="Map/Floor1/Walls" index="6" unique_id=1897292352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 3.6, 40.10027)
+
+[node name="MeshInstance" type="MeshInstance3D" parent="Map/Floor1/Walls/EastWall_North2" index="0" unique_id=1553233459]
 mesh = SubResource("MESH_WallShortSegment")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="Door" type="Node3D" parent="Floor1" index="3" unique_id=1375079704]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Floor1/Walls/EastWall_North2" index="1" unique_id=899496754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003921509, 0.024261475, -0.082092285)
+shape = SubResource("BoxShape3D_y77v7")
 
-[node name="MainDoor_South" type="MeshInstance3D" parent="Floor1/Door" index="0" unique_id=1001455392]
+[node name="EastWall_North3" type="StaticBody3D" parent="Map/Floor1/Walls" index="7" unique_id=1091064917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 11.299643, 40.10027)
+
+[node name="MeshInstance" type="MeshInstance3D" parent="Map/Floor1/Walls/EastWall_North3" index="0" unique_id=69105513]
+mesh = SubResource("MESH_WallShortSegment")
+surface_material_override/0 = SubResource("MAT_Wall")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Floor1/Walls/EastWall_North3" index="1" unique_id=1962582819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003921509, 0.024261475, -0.082092285)
+shape = SubResource("BoxShape3D_y77v7")
+
+[node name="EastWall_North4" type="StaticBody3D" parent="Map/Floor1/Walls" index="8" unique_id=1152003717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 11.299643, -39.98496)
+
+[node name="MeshInstance" type="MeshInstance3D" parent="Map/Floor1/Walls/EastWall_North4" index="0" unique_id=272244643]
+mesh = SubResource("MESH_WallShortSegment")
+surface_material_override/0 = SubResource("MAT_Wall")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Floor1/Walls/EastWall_North4" index="1" unique_id=148794407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003921509, 0.024261475, -0.082092285)
+shape = SubResource("BoxShape3D_y77v7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Floor1/Walls" index="9" unique_id=378966551]
+
+[node name="Door" type="Node3D" parent="Map/Floor1" index="3" unique_id=1375079704]
+
+[node name="MainDoor_South" type="MeshInstance3D" parent="Map/Floor1/Door" index="0" unique_id=1001455392]
 transform = Transform3D(1.1735492, 0, 0, 0, 0.86451375, 0, 0, 0, 1, -0.28225422, 3.5123591, 59.992676)
 mesh = SubResource("MESH_DoorLarge")
 surface_material_override/0 = SubResource("MAT_Door")
 
-[node name="SideDoor_West" type="MeshInstance3D" parent="Floor1/Door" index="1" unique_id=863997249]
+[node name="SideDoor_West" type="MeshInstance3D" parent="Map/Floor1/Door" index="1" unique_id=863997249]
 transform = Transform3D(1, 0, 0, 0, 1.0998694, 0, 0, 0, 3.3538237, -90.001526, 3.5703826, 0)
 mesh = SubResource("MESH_DoorSide")
 surface_material_override/0 = SubResource("MAT_Door")
 
-[node name="EmergencyDoor_East_LowerEntry" type="MeshInstance3D" parent="Floor1/Door" index="2" unique_id=1639975790]
+[node name="EmergencyDoor_East_LowerEntry" type="MeshInstance3D" parent="Map/Floor1/Door" index="2" unique_id=1639975790]
 transform = Transform3D(1, 0, 0, 0, 1.1042008, 0, 0, 0, 3.4468362, 89.98591, 3.520011, 0.29309082)
 mesh = SubResource("MESH_DoorSide")
 surface_material_override/0 = SubResource("MAT_Door")
 
-[node name="placeHolderBlock" type="Node3D" parent="Floor1" index="4" unique_id=1020827575]
+[node name="placeHolderBlock" type="Node3D" parent="Map/Floor1" index="4" unique_id=1020827575]
 
-[node name="F1_North_A1" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="0" unique_id=394728535]
+[node name="F1_North_A1" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="0" unique_id=394728535]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, -44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_North_A2" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="1" unique_id=386970214]
+[node name="F1_North_A2" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="1" unique_id=386970214]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, -44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_North_A3" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="2" unique_id=1258433113]
+[node name="F1_North_A3" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="2" unique_id=1258433113]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, -44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_North_A4" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="3" unique_id=500911475]
+[node name="F1_North_A4" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="3" unique_id=500911475]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, -44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_North_B1" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="4" unique_id=40582131]
+[node name="F1_North_B1" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="4" unique_id=40582131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, -17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_North_B2" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="5" unique_id=1914752446]
+[node name="F1_North_B2" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="5" unique_id=1914752446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, -17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_North_B3" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="6" unique_id=2118164681]
+[node name="F1_North_B3" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="6" unique_id=2118164681]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, -17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_North_B4" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="7" unique_id=1444021495]
+[node name="F1_North_B4" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="7" unique_id=1444021495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, -17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_A1" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="8" unique_id=52018159]
+[node name="F1_South_A1" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="8" unique_id=52018159]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, 17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_A2" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="9" unique_id=226803441]
+[node name="F1_South_A2" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="9" unique_id=226803441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, 17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_A3" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="10" unique_id=1350180729]
+[node name="F1_South_A3" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="10" unique_id=1350180729]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, 17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_A4" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="11" unique_id=1153861501]
+[node name="F1_South_A4" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="11" unique_id=1153861501]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, 17)
 mesh = SubResource("MESH_PlaceHolder_B")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_B1" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="12" unique_id=732271511]
+[node name="F1_South_B1" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="12" unique_id=732271511]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, 44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_B2" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="13" unique_id=341430373]
+[node name="F1_South_B2" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="13" unique_id=341430373]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, 44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_B3" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="14" unique_id=1937470767]
+[node name="F1_South_B3" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="14" unique_id=1937470767]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, 44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="F1_South_B4" type="MeshInstance3D" parent="Floor1/placeHolderBlock" index="15" unique_id=870458901]
+[node name="F1_South_B4" type="MeshInstance3D" parent="Map/Floor1/placeHolderBlock" index="15" unique_id=870458901]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, 44)
 mesh = SubResource("MESH_PlaceHolder_A")
 surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
 
-[node name="Floor2" type="Node3D" parent="." index="5" unique_id=1681269691]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6, 0)
+[node name="supportPillar" type="Node3D" parent="Map/Floor1" index="5" unique_id=1944847579]
 
-[node name="Floor" type="MeshInstance3D" parent="Floor2" index="0" unique_id=1728044772]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
-mesh = SubResource("MESH_FactoryFloor")
-surface_material_override/0 = SubResource("MAT_Floor2")
-
-[node name="LayoutGuide" type="Node3D" parent="Floor2" index="1" unique_id=993355874]
-
-[node name="MiddleSplitLine" type="MeshInstance3D" parent="Floor2/LayoutGuide" index="0" unique_id=2013992945]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.055, 0)
-mesh = SubResource("MESH_CentralLine")
-surface_material_override/0 = SubResource("MAT_Line")
-
-[node name="BayLine_X_Left" type="MeshInstance3D" parent="Floor2/LayoutGuide" index="1" unique_id=893188331]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0.06, 0)
-mesh = SubResource("MESH_BayLine_X")
-surface_material_override/0 = SubResource("MAT_Line")
-
-[node name="BayLine_X_Middle" type="MeshInstance3D" parent="Floor2/LayoutGuide" index="2" unique_id=574983336]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
-mesh = SubResource("MESH_BayLine_X")
-surface_material_override/0 = SubResource("MAT_Line")
-
-[node name="BayLine_X_Right" type="MeshInstance3D" parent="Floor2/LayoutGuide" index="3" unique_id=1611604329]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0.06, 0)
-mesh = SubResource("MESH_BayLine_X")
-surface_material_override/0 = SubResource("MAT_Line")
-
-[node name="BayLine_Z_NorthHalf" type="MeshInstance3D" parent="Floor2/LayoutGuide" index="4" unique_id=1228611773]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -30)
-mesh = SubResource("MESH_BayLine_Z")
-surface_material_override/0 = SubResource("MAT_Line")
-
-[node name="BayLine_Z_SouthHalf" type="MeshInstance3D" parent="Floor2/LayoutGuide" index="5" unique_id=1528914794]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 30)
-mesh = SubResource("MESH_BayLine_Z")
-surface_material_override/0 = SubResource("MAT_Line")
-
-[node name="Walls" type="Node3D" parent="Floor2" index="2" unique_id=825322270]
-
-[node name="NorthWall" type="MeshInstance3D" parent="Floor2/Walls" index="0" unique_id=1584616398]
-transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, 0, 3.3, -60)
-mesh = SubResource("MESH_WallLongFull")
-surface_material_override/0 = SubResource("MAT_Wall")
-
-[node name="SouthWall_Left" type="MeshInstance3D" parent="Floor2/Walls" index="1" unique_id=996282203]
-transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -59, 3.3, 60)
-mesh = SubResource("MESH_WallLongSegment")
-surface_material_override/0 = SubResource("MAT_Wall")
-
-[node name="SouthWall_Right" type="MeshInstance3D" parent="Floor2/Walls" index="2" unique_id=607985425]
-transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, 59, 3.3, 60)
-mesh = SubResource("MESH_WallLongSegment")
-surface_material_override/0 = SubResource("MAT_Wall")
-
-[node name="WestWall_North" type="MeshInstance3D" parent="Floor2/Walls" index="3" unique_id=546443891]
-transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -90, 3.3, -40)
-mesh = SubResource("MESH_WallShortSegment")
-surface_material_override/0 = SubResource("MAT_Wall")
-
-[node name="WestWall_South" type="MeshInstance3D" parent="Floor2/Walls" index="4" unique_id=1658220395]
-transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -90, 3.3, 40)
-mesh = SubResource("MESH_WallShortSegment")
-surface_material_override/0 = SubResource("MAT_Wall")
-
-[node name="EastWall_North" type="MeshInstance3D" parent="Floor2/Walls" index="5" unique_id=733469185]
-transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, 90, 3.3, -40)
-mesh = SubResource("MESH_WallShortSegment")
-surface_material_override/0 = SubResource("MAT_Wall")
-
-[node name="EastWall_South" type="MeshInstance3D" parent="Floor2/Walls" index="6" unique_id=1780908196]
-transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, 90, 3.3, 40)
-mesh = SubResource("MESH_WallShortSegment")
-surface_material_override/0 = SubResource("MAT_Wall")
-
-[node name="Door" type="Node3D" parent="Floor2" index="3" unique_id=417538870]
-
-[node name="EmergencyDoor_East_UpperExit" type="MeshInstance3D" parent="Floor2/Door" index="0" unique_id=241628084]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.4827933, 89.9909, 3.2500005, 0.11051035)
-mesh = SubResource("MESH_DoorSide")
-surface_material_override/0 = SubResource("MAT_Door")
-
-[node name="ServiceDoor_South" type="MeshInstance3D" parent="Floor2/Door" index="1" unique_id=1915625252]
-transform = Transform3D(-4.371138e-08, 0, 4.708685, 0, 1, 0, -0.9999998, 0, -2.0582316e-07, 0, 3.2500005, 60.013424)
-mesh = SubResource("MESH_DoorSide")
-surface_material_override/0 = SubResource("MAT_Door")
-
-[node name="EmergencyDoor_East_UpperExit2" type="MeshInstance3D" parent="Floor2/Door" index="2" unique_id=1066508011]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.4621375, -89.986824, 3.3538651, -0.16722548)
-mesh = SubResource("MESH_DoorSide")
-surface_material_override/0 = SubResource("MAT_Door")
-
-[node name="placeHolderBlock" type="Node3D" parent="Floor2" index="4" unique_id=1834344009]
-
-[node name="F2_North_A1" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="0" unique_id=1393646859]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, -44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_North_A2" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="1" unique_id=772332581]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, -44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_North_A3" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="2" unique_id=1777912939]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, -44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_North_A4" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="3" unique_id=1376768156]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, -44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_North_B1" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="4" unique_id=1693334846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, -17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_North_B2" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="5" unique_id=869081923]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, -17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_North_B3" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="6" unique_id=67842487]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, -17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_North_B4" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="7" unique_id=1961760731]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, -17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_A1" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="8" unique_id=573717023]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, 17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_A2" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="9" unique_id=1786363772]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, 17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_A3" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="10" unique_id=506152631]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, 17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_A4" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="11" unique_id=1446505150]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, 17)
-mesh = SubResource("MESH_PlaceHolder_B")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_B1" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="12" unique_id=133192719]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, 44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_B2" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="13" unique_id=177044424]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, 44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_B3" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="14" unique_id=1064569598]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, 44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="F2_South_B4" type="MeshInstance3D" parent="Floor2/placeHolderBlock" index="15" unique_id=854449685]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, 44)
-mesh = SubResource("MESH_PlaceHolder_A")
-surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
-
-[node name="supportPillar" type="Node3D" parent="." index="6" unique_id=251898845]
-
-[node name="Pillar_Left_01" type="MeshInstance3D" parent="supportPillar" index="0" unique_id=228975015]
+[node name="Pillar_Left_01" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="0" unique_id=978551750]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 8.2, -42)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="Pillar_Left_02" type="MeshInstance3D" parent="supportPillar" index="1" unique_id=1503202218]
+[node name="Pillar_Left_02" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="1" unique_id=734069950]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 8.2, -14)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="Pillar_Left_03" type="MeshInstance3D" parent="supportPillar" index="2" unique_id=1249718933]
+[node name="Pillar_Left_03" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="2" unique_id=1684723356]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 8.2, 14)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="Pillar_Left_04" type="MeshInstance3D" parent="supportPillar" index="3" unique_id=480224905]
+[node name="Pillar_Left_04" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="3" unique_id=898440034]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 8.2, 42)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="Pillar_Right_01" type="MeshInstance3D" parent="supportPillar" index="4" unique_id=1509414172]
+[node name="Pillar_Right_01" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="4" unique_id=299926257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 8.2, -42)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="Pillar_Right_02" type="MeshInstance3D" parent="supportPillar" index="5" unique_id=686428417]
+[node name="Pillar_Right_02" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="5" unique_id=528153]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 8.2, -14)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="Pillar_Right_03" type="MeshInstance3D" parent="supportPillar" index="6" unique_id=559115273]
+[node name="Pillar_Right_03" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="6" unique_id=281100357]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 8.2, 14)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="Pillar_Right_04" type="MeshInstance3D" parent="supportPillar" index="7" unique_id=1549040894]
+[node name="Pillar_Right_04" type="MeshInstance3D" parent="Map/Floor1/supportPillar" index="7" unique_id=1781143877]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 8.2, 42)
 mesh = SubResource("MESH_SupportPillar")
 surface_material_override/0 = SubResource("MAT_SupportPillar")
 
-[node name="FireSuppressionSystem" type="Node3D" parent="." index="7" unique_id=2065043394]
+[node name="Floor2" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="1" unique_id=1521406421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6, 0)
 
-[node name="Floor1_CeilingPipe_North" type="MeshInstance3D" parent="FireSuppressionSystem" index="0" unique_id=45831034]
+[node name="Floor" type="MeshInstance3D" parent="Map/Floor2" index="0" unique_id=2098597064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+mesh = SubResource("MESH_FactoryFloor")
+surface_material_override/0 = SubResource("MAT_Floor2")
+
+[node name="LayoutGuide" type="Node3D" parent="Map/Floor2" index="1" unique_id=802673258]
+
+[node name="MiddleSplitLine" type="MeshInstance3D" parent="Map/Floor2/LayoutGuide" index="0" unique_id=1974017024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.055, 0)
+mesh = SubResource("MESH_CentralLine")
+surface_material_override/0 = SubResource("MAT_Line")
+
+[node name="BayLine_X_Left" type="MeshInstance3D" parent="Map/Floor2/LayoutGuide" index="1" unique_id=433600979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0.06, 0)
+mesh = SubResource("MESH_BayLine_X")
+surface_material_override/0 = SubResource("MAT_Line")
+
+[node name="BayLine_X_Middle" type="MeshInstance3D" parent="Map/Floor2/LayoutGuide" index="2" unique_id=550486974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
+mesh = SubResource("MESH_BayLine_X")
+surface_material_override/0 = SubResource("MAT_Line")
+
+[node name="BayLine_X_Right" type="MeshInstance3D" parent="Map/Floor2/LayoutGuide" index="3" unique_id=525974847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0.06, 0)
+mesh = SubResource("MESH_BayLine_X")
+surface_material_override/0 = SubResource("MAT_Line")
+
+[node name="BayLine_Z_NorthHalf" type="MeshInstance3D" parent="Map/Floor2/LayoutGuide" index="4" unique_id=1161960558]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -30)
+mesh = SubResource("MESH_BayLine_Z")
+surface_material_override/0 = SubResource("MAT_Line")
+
+[node name="BayLine_Z_SouthHalf" type="MeshInstance3D" parent="Map/Floor2/LayoutGuide" index="5" unique_id=651253430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 30)
+mesh = SubResource("MESH_BayLine_Z")
+surface_material_override/0 = SubResource("MAT_Line")
+
+[node name="Walls" type="Node3D" parent="Map/Floor2" index="2" unique_id=1839912681]
+
+[node name="NorthWall" type="MeshInstance3D" parent="Map/Floor2/Walls" index="0" unique_id=1621384605]
+transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, 0, 3.3, -60)
+mesh = SubResource("MESH_WallLongFull")
+surface_material_override/0 = SubResource("MAT_Wall")
+
+[node name="SouthWall_Left" type="MeshInstance3D" parent="Map/Floor2/Walls" index="1" unique_id=774896719]
+transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -59, 3.3, 60)
+mesh = SubResource("MESH_WallLongSegment")
+surface_material_override/0 = SubResource("MAT_Wall")
+
+[node name="SouthWall_Right" type="MeshInstance3D" parent="Map/Floor2/Walls" index="2" unique_id=676570051]
+transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, 59, 3.3, 60)
+mesh = SubResource("MESH_WallLongSegment")
+surface_material_override/0 = SubResource("MAT_Wall")
+
+[node name="WestWall_North" type="MeshInstance3D" parent="Map/Floor2/Walls" index="3" unique_id=1543662971]
+transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -90, 3.3, -40)
+mesh = SubResource("MESH_WallShortSegment")
+surface_material_override/0 = SubResource("MAT_Wall")
+
+[node name="WestWall_South" type="MeshInstance3D" parent="Map/Floor2/Walls" index="4" unique_id=1501604759]
+transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -90, 3.3, 40)
+mesh = SubResource("MESH_WallShortSegment")
+surface_material_override/0 = SubResource("MAT_Wall")
+
+[node name="Door" type="Node3D" parent="Map/Floor2" index="3" unique_id=766445479]
+
+[node name="EmergencyDoor_East_UpperExit" type="MeshInstance3D" parent="Map/Floor2/Door" index="0" unique_id=164292229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.4827933, 89.9909, 3.2500005, 0.11051035)
+mesh = SubResource("MESH_DoorSide")
+surface_material_override/0 = SubResource("MAT_Door")
+
+[node name="ServiceDoor_South" type="MeshInstance3D" parent="Map/Floor2/Door" index="1" unique_id=1197510335]
+transform = Transform3D(-4.371138e-08, 0, 4.708685, 0, 1, 0, -0.9999998, 0, -2.0582316e-07, 0, 3.2500005, 60.013424)
+mesh = SubResource("MESH_DoorSide")
+surface_material_override/0 = SubResource("MAT_Door")
+
+[node name="EmergencyDoor_East_UpperExit2" type="MeshInstance3D" parent="Map/Floor2/Door" index="2" unique_id=662951892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.4621375, -89.986824, 3.3538651, -0.16722548)
+mesh = SubResource("MESH_DoorSide")
+surface_material_override/0 = SubResource("MAT_Door")
+
+[node name="placeHolderBlock" type="Node3D" parent="Map/Floor2" index="4" unique_id=2046321844]
+
+[node name="F2_North_A1" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="0" unique_id=1166622791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, -44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_North_A2" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="1" unique_id=745605269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, -44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_North_A3" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="2" unique_id=1841429125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, -44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_North_A4" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="3" unique_id=148179467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, -44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_North_B1" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="4" unique_id=718854460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, -17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_North_B2" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="5" unique_id=285493507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, -17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_North_B3" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="6" unique_id=1420039856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, -17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_North_B4" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="7" unique_id=1155508248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, -17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_A1" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="8" unique_id=1582202281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, 17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_A2" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="9" unique_id=585773698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, 17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_A3" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="10" unique_id=1787219452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, 17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_A4" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="11" unique_id=1941029744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, 17)
+mesh = SubResource("MESH_PlaceHolder_B")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_B1" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="12" unique_id=43454986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, 0.12, 44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_B2" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="13" unique_id=1621032367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0.12, 44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_B3" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="14" unique_id=120580330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0.12, 44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="F2_South_B4" type="MeshInstance3D" parent="Map/Floor2/placeHolderBlock" index="15" unique_id=696827417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0.12, 44)
+mesh = SubResource("MESH_PlaceHolder_A")
+surface_material_override/0 = SubResource("MAT_PlaceHolderBlock")
+
+[node name="FireSuppressionSystem" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="2" unique_id=657027646]
+
+[node name="Floor1_CeilingPipe_North" type="MeshInstance3D" parent="Map/FireSuppressionSystem" index="0" unique_id=689363307]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 6.9, -41.700005)
 mesh = SubResource("MESH_PipeLongX")
 surface_material_override/0 = SubResource("MAT_Pipe")
 
-[node name="Floor1_CeilingPipe_Middle" type="MeshInstance3D" parent="FireSuppressionSystem" index="1" unique_id=1395248072]
+[node name="Floor1_CeilingPipe_Middle" type="MeshInstance3D" parent="Map/FireSuppressionSystem" index="1" unique_id=1543781736]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 6.9, 0)
 mesh = SubResource("MESH_PipeLongX")
 surface_material_override/0 = SubResource("MAT_Pipe")
 
-[node name="Floor1_CeilingPipe_South" type="MeshInstance3D" parent="FireSuppressionSystem" index="2" unique_id=302565899]
+[node name="Floor1_CeilingPipe_South" type="MeshInstance3D" parent="Map/FireSuppressionSystem" index="2" unique_id=1852876860]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 6.9, 41.56981)
 mesh = SubResource("MESH_PipeLongX")
 surface_material_override/0 = SubResource("MAT_Pipe")
 
-[node name="Floor2_CeilingPipe_North" type="MeshInstance3D" parent="FireSuppressionSystem" index="3" unique_id=27789067]
+[node name="Floor2_CeilingPipe_North" type="MeshInstance3D" parent="Map/FireSuppressionSystem" index="3" unique_id=12592661]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 14.5, -42.40881)
 mesh = SubResource("MESH_PipeLongX")
 surface_material_override/0 = SubResource("MAT_Pipe")
 
-[node name="Floor2_CeilingPipe_Middle" type="MeshInstance3D" parent="FireSuppressionSystem" index="4" unique_id=1558490368]
+[node name="Floor2_CeilingPipe_Middle" type="MeshInstance3D" parent="Map/FireSuppressionSystem" index="4" unique_id=725560211]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 14.5, 0)
 mesh = SubResource("MESH_PipeLongX")
 surface_material_override/0 = SubResource("MAT_Pipe")
 
-[node name="Floor2_CeilingPipe_South" type="MeshInstance3D" parent="FireSuppressionSystem" index="5" unique_id=478136974]
+[node name="Floor2_CeilingPipe_South" type="MeshInstance3D" parent="Map/FireSuppressionSystem" index="5" unique_id=1694119860]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 14.5, 42.134365)
 mesh = SubResource("MESH_PipeLongX")
 surface_material_override/0 = SubResource("MAT_Pipe")
 
-[node name="EmergencyStairModule_OneFloorPattern" type="Node3D" parent="." index="8" unique_id=1092606804]
+[node name="EmergencyStairModule_OneFloorPattern" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="3" unique_id=1174632079]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.548534, 0, 103.31134)
 
-[node name="Connector_FromFactory_Floor1" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="0" unique_id=1916872519]
+[node name="Connector_FromFactory_Floor1" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="0" unique_id=335651372]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.8, 0.02, 10)
 mesh = SubResource("MESH_ConnectorFloor")
 surface_material_override/0 = SubResource("MAT_Stair")
 
-[node name="StairWall_North" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="1" unique_id=1493863371]
+[node name="StairWall_North" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="1" unique_id=1648395677]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 4.1, -19)
 mesh = SubResource("MESH_StairWallLong")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="StairWall_South" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="2" unique_id=2109790899]
+[node name="StairWall_South" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="2" unique_id=284471744]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, 4.1, 19)
 mesh = SubResource("MESH_StairWallLong")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="StairWall_East" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="3" unique_id=1601715375]
+[node name="StairWall_East" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="3" unique_id=1508631941]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122, 4.1, 0)
 mesh = SubResource("MESH_StairWallShort")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="StairWall_West_NorthSegment" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="4" unique_id=810581047]
+[node name="StairWall_West_NorthSegment" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="4" unique_id=1841781442]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.6698631, 94, 4.1, -6.5036745)
 mesh = SubResource("MESH_StairWallShort")
 surface_material_override/0 = SubResource("MAT_Wall")
 
-[node name="Door_BottomEntry_FromFloor1" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="5" unique_id=380970771]
+[node name="Door_BottomEntry_FromFloor1" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="5" unique_id=60858342]
 transform = Transform3D(1, 0, 0, 0, 1.1532333, 0, 0, 0, 1.1183721, 94.00276, 3.7467623, 12.520841)
 mesh = SubResource("MESH_DoorSide")
 surface_material_override/0 = SubResource("MAT_Door")
 
-[node name="Landing_Bottom_AtDoor" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="6" unique_id=175597589]
+[node name="Landing_Bottom_AtDoor" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="6" unique_id=1175179885]
 transform = Transform3D(4.4668775, 0, 0, 0, 1.2912974, 0, 0, 0, 1.5797821, 108.06406, 0.18, 10.175309)
 mesh = SubResource("MESH_StairLanding")
 surface_material_override/0 = SubResource("MAT_Stair")
 
-[node name="Landing_Turn_Right" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="7" unique_id=1543673144]
+[node name="Landing_Turn_Right" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="7" unique_id=899789015]
 transform = Transform3D(-4.371139e-08, 0, 1.0747259, 0, 1, 0, -1, 0, -4.697776e-08, 107.88287, 2.1631312, -14.725269)
 mesh = SubResource("MESH_StairBridgeLanding")
 surface_material_override/0 = SubResource("MAT_Stair")
 
-[node name="UpSair2" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="8" unique_id=433544767]
+[node name="UpSair2" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="8" unique_id=1751505381]
 transform = Transform3D(-4.371139e-08, 0, -0.5000486, 0, 1, 0, 1, 0, -2.1857817e-08, 115.63632, 4.996586, -0.8308487)
 mesh = SubResource("MESH_StairBridgeLanding")
 surface_material_override/0 = SubResource("MAT_Stair")
 
-[node name="Landing_Turn_Right2" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern/UpSair2" index="0" unique_id=1749508575]
+[node name="Landing_Turn_Right2" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern/UpSair2" index="0" unique_id=1909527421]
 transform = Transform3D(0.8060432, 0, 0, 0, 1, 0, 0, 0, 1.020204, -6.89277, -0.98683023, -0.0011606514)
 mesh = SubResource("MESH_StairBridgeLanding")
 surface_material_override/0 = SubResource("MAT_Stair")
 
-[node name="UpSair" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern" index="9" unique_id=1257912603]
+[node name="UpSair" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern" index="9" unique_id=642867137]
 transform = Transform3D(-4.697776e-08, 0, 0.55062443, 0, 1.1981169, 0, -1.0747259, 0, -2.4068559e-08, 101.19405, 1.640986, -10.100029)
 mesh = SubResource("MESH_StairBridgeLanding")
 surface_material_override/0 = SubResource("MAT_Stair")
 
-[node name="Landing_Turn_Right2" type="MeshInstance3D" parent="EmergencyStairModule_OneFloorPattern/UpSair" index="0" unique_id=1205308842]
+[node name="Landing_Turn_Right2" type="MeshInstance3D" parent="Map/EmergencyStairModule_OneFloorPattern/UpSair" index="0" unique_id=889802171]
 transform = Transform3D(0.8060432, 0, 0, 0, 1, 0, 0, 0, 1.020204, -6.89277, -0.98683023, -0.0011606514)
 mesh = SubResource("MESH_StairBridgeLanding")
 surface_material_override/0 = SubResource("MAT_Stair")
 
-[node name="Roof" type="Node3D" parent="." index="9" unique_id=1698137196]
+[node name="Roof" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="4" unique_id=2101367040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.1372833)
 
-[node name="InnerCeilingPlane" type="MeshInstance3D" parent="Roof" index="0" unique_id=1559044830]
+[node name="InnerCeilingPlane" type="MeshInstance3D" parent="Map/Roof" index="0" unique_id=198153406]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.25, 0)
 mesh = SubResource("MESH_RoofCeilingPlane")
 surface_material_override/0 = SubResource("MAT_RoofInner")
 
-[node name="RoofPlate_NorthSlope" type="MeshInstance3D" parent="Roof" index="1" unique_id=354170456]
+[node name="RoofPlate_NorthSlope" type="MeshInstance3D" parent="Map/Roof" index="1" unique_id=1500460530]
 transform = Transform3D(1, 0, 0, 0, 0.984, 0.18, 0, -0.18, 0.984, 0, 20.5, -32)
 mesh = SubResource("MESH_RoofPlate")
 surface_material_override/0 = SubResource("MAT_Roof")
 
-[node name="RoofPlate_SouthSlope" type="MeshInstance3D" parent="Roof" index="2" unique_id=398413141]
+[node name="RoofPlate_SouthSlope" type="MeshInstance3D" parent="Map/Roof" index="2" unique_id=2092679493]
 transform = Transform3D(1, 0, 0, 0, 0.984, -0.18, 0, 0.18, 0.984, 0, 20.5, 32)
 mesh = SubResource("MESH_RoofPlate")
 surface_material_override/0 = SubResource("MAT_Roof")
 
-[node name="RoofCentralRidge" type="MeshInstance3D" parent="Roof" index="3" unique_id=2045228081]
+[node name="RoofCentralRidge" type="MeshInstance3D" parent="Map/Roof" index="3" unique_id=1515161914]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.4, 0)
 mesh = SubResource("MESH_RoofRidge")
 surface_material_override/0 = SubResource("MAT_RoofInner")
 
-[node name="RoofEndCap_West" type="MeshInstance3D" parent="Roof" index="4" unique_id=1236652630]
+[node name="RoofEndCap_West" type="MeshInstance3D" parent="Map/Roof" index="4" unique_id=1509596050]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 20.3, 0)
 mesh = SubResource("MESH_RoofEndCap")
 surface_material_override/0 = SubResource("MAT_Roof")
 
-[node name="RoofEndCap_East" type="MeshInstance3D" parent="Roof" index="5" unique_id=1333879787]
+[node name="RoofEndCap_East" type="MeshInstance3D" parent="Map/Roof" index="5" unique_id=1242177245]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94, 20.3, 0)
 mesh = SubResource("MESH_RoofEndCap")
 surface_material_override/0 = SubResource("MAT_Roof")

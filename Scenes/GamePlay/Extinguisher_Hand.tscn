@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cmb0wsx80o7sm"]
 
 [ext_resource type="Script" uid="uid://cjqcln5h8khxp" path="res://Classes/Gameplay/Extinguisher_Hand.gd" id="1_ext_hand"]
+[ext_resource type="AudioStream" uid="uid://bso280cht4pdk" path="res://Assets/Audio/tieng_xit_binh_chua_chay_cuu_hoa.mp3" id="2_wwp3e"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_h54ih"]
 top_radius = 0.1
@@ -61,3 +62,6 @@ lifetime = 1.4
 randomness = 0.5
 process_material = SubResource("ParticleProcessMaterial_jmcll")
 draw_pass_1 = SubResource("SphereMesh_t26db")
+
+[node name="SprayAudio" type="AudioStreamPlayer3D" parent="." unique_id=3282476]
+stream = ExtResource("2_wwp3e")

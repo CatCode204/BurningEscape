@@ -19,279 +19,387 @@ roughness = 0.85
 albedo_color = Color(0.72, 0.72, 0.72, 1)
 roughness = 0.95
 
+[sub_resource type="BoxMesh" id="BoxMesh_Size_001"]
+size = Vector3(36, 0.1, 22)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_002"]
+size = Vector3(12, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_003"]
+size = Vector3(0.2, 3, 5.788068)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_004"]
+size = Vector3(5, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_005"]
+size = Vector3(4.6, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_006"]
+size = Vector3(22, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_007"]
+size = Vector3(0.2, 3, 18)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_008"]
+size = Vector3(10, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_009"]
+size = Vector3(18, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_010"]
+size = Vector3(8, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_011"]
+size = Vector3(0.2, 3, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_012"]
+size = Vector3(15.483018, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_013"]
+size = Vector3(0.2, 3, 2.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_014"]
+size = Vector3(0.2, 3, 1.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_015"]
+size = Vector3(0.2, 3, 1.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_016"]
+size = Vector3(0.2, 3, 2.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_017"]
+size = Vector3(1.8, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_018"]
+size = Vector3(3.8, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_019"]
+size = Vector3(0.2, 3, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_020"]
+size = Vector3(3.4, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_021"]
+size = Vector3(1.581502, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_022"]
+size = Vector3(2, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_023"]
+size = Vector3(6.2, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_024"]
+size = Vector3(0.2, 3, 3.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_025"]
+size = Vector3(0.2, 3, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_026"]
+size = Vector3(3, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_027"]
+size = Vector3(0.2, 3, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_028"]
+size = Vector3(0.2, 3, 8.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_029"]
+size = Vector3(4.5, 3, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_030"]
+size = Vector3(10.8, 1.35, 0.16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_031"]
+size = Vector3(0.16, 1.35, 1.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_032"]
+size = Vector3(1.3, 0.04, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_033"]
+size = Vector3(1.2, 0.04, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_034"]
+size = Vector3(0.04, 0.04, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_035"]
+size = Vector3(0.04, 0.04, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Size_036"]
+size = Vector3(0.04, 0.04, 0.7)
+
 [node name="Level1" unique_id=1648026258 instance=ExtResource("1_base")]
 
 [node name="Level1_Floor" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="0" unique_id=1851654704]
 
 [node name="Floor_All" type="MeshInstance3D" parent="Map/Level1_Floor" index="0" unique_id=648538334]
-transform = Transform3D(36, 0, 0, 0, 0.1, 0, 0, 0, 22, 0, -0.05, 0)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("BoxMesh_Size_001")
 surface_material_override/0 = SubResource("StandardMaterial3D_Floor")
 
 [node name="Level1_Walls" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="1" unique_id=1146009264]
 
 [node name="Outer_Conference_North" type="MeshInstance3D" parent="Map/Level1_Walls" index="0" unique_id=104090176]
-transform = Transform3D(12, 0, 0, 0, 3, 0, 0, 0, 0.2, -10, 1.5, -11)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, -11)
+mesh = SubResource("BoxMesh_Size_002")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Conference_West" type="MeshInstance3D" parent="Map/Level1_Walls" index="1" unique_id=1836361656]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 5.788068, -16, 1.5, -8.216226)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1.5, -8.216226)
+mesh = SubResource("BoxMesh_Size_003")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Conference_South_Left" type="MeshInstance3D" parent="Map/Level1_Walls" index="2" unique_id=792683236]
-transform = Transform3D(5, 0, 0, 0, 3, 0, 0, 0, 0.2, -13.5, 1.5, -5.420185)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 1.5, -5.420185)
+mesh = SubResource("BoxMesh_Size_004")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Conference_South_Right" type="MeshInstance3D" parent="Map/Level1_Walls" index="3" unique_id=1880570627]
-transform = Transform3D(4.6, 0, 0, 0, 3, 0, 0, 0, 0.2, -6.3, 1.5, -4)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3, 1.5, -4)
+mesh = SubResource("BoxMesh_Size_005")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Top_Corridor_North" type="MeshInstance3D" parent="Map/Level1_Walls" index="4" unique_id=803302261]
-transform = Transform3D(22, 0, 0, 0, 3, 0, 0, 0, 0.2, 7, 1.5, -7)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5, -7)
+mesh = SubResource("BoxMesh_Size_006")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_East_Side" type="MeshInstance3D" parent="Map/Level1_Walls" index="5" unique_id=211929146]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 18, 18, 1.5, 2)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1.5, 2)
+mesh = SubResource("BoxMesh_Size_007")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Bottom_Right" type="MeshInstance3D" parent="Map/Level1_Walls" index="6" unique_id=1771824585]
-transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 0.2, 13, 1.5, 11)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.5, 11)
+mesh = SubResource("BoxMesh_Size_008")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Bottom_Center" type="MeshInstance3D" parent="Map/Level1_Walls" index="7" unique_id=334807644]
-transform = Transform3D(18, 0, 0, 0, 3, 0, 0, 0, 0.2, -1, 1.5, 11)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.5, 11)
+mesh = SubResource("BoxMesh_Size_009")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Bottom_Left" type="MeshInstance3D" parent="Map/Level1_Walls" index="8" unique_id=1663621560]
-transform = Transform3D(8, 0, 0, 0, 3, 0, 0, 0, 0.2, -14, 1.5, 11)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1.5, 11)
+mesh = SubResource("BoxMesh_Size_010")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Left_Office" type="MeshInstance3D" parent="Map/Level1_Walls" index="9" unique_id=388204924]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 15, -18, 1.5, 3.5)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5, 3.5)
+mesh = SubResource("BoxMesh_Size_011")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Center_Bottom_Long" type="MeshInstance3D" parent="Map/Level1_Walls" index="10" unique_id=1649566100]
-transform = Transform3D(15.483018, 0, 0, 0, 3, 0, 0, 0, 0.2, 0.4104637, 1.5000002, 8.1682415)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.410464, 1.5, 8.168242)
+mesh = SubResource("BoxMesh_Size_012")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Outer_Kitchen_Left_Lower" type="MeshInstance3D" parent="Map/Level1_Walls" index="11" unique_id=1485093427]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 2.8, 9.8, 1.5, 9.6)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 1.5, 9.6)
+mesh = SubResource("BoxMesh_Size_013")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Office_Block_Right_Upper" type="MeshInstance3D" parent="Map/Level1_Walls" index="12" unique_id=1933823644]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 1.6, -10, 1.5, -1)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, -1)
+mesh = SubResource("BoxMesh_Size_014")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Office_Block_Right_Office1" type="MeshInstance3D" parent="Map/Level1_Walls" index="13" unique_id=2044160190]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 1.7, -10, 1.5, 2.05)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, 2.05)
+mesh = SubResource("BoxMesh_Size_015")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Office_Block_Right_Office2" type="MeshInstance3D" parent="Map/Level1_Walls" index="14" unique_id=933488293]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 2.7, -10, 1.5, 5.55)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, 5.55)
+mesh = SubResource("BoxMesh_Size_016")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Office_1_North" type="MeshInstance3D" parent="Map/Level1_Walls" index="15" unique_id=253156152]
-transform = Transform3D(8, 0, 0, 0, 3, 0, 0, 0, 0.2, -14, 1.5, -1.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1.5, -1.8)
+mesh = SubResource("BoxMesh_Size_010")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Office_1_2_Partition" type="MeshInstance3D" parent="Map/Level1_Walls" index="16" unique_id=1553364382]
-transform = Transform3D(8, 0, 0, 0, 3, 0, 0, 0, 0.2, -14, 1.5, 2.9)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1.5, 2.9)
+mesh = SubResource("BoxMesh_Size_010")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Office_2_3_Partition" type="MeshInstance3D" parent="Map/Level1_Walls" index="17" unique_id=1398413492]
-transform = Transform3D(8, 0, 0, 0, 3, 0, 0, 0, 0.2, -14, 1.5, 6.9)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1.5, 6.9)
+mesh = SubResource("BoxMesh_Size_010")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Reception_North_Left" type="MeshInstance3D" parent="Map/Level1_Walls" index="18" unique_id=1222150639]
-transform = Transform3D(1.8, 0, 0, 0, 3, 0, 0, 0, 0.2, -3.1, 1.5, -4)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 1.5, -4)
+mesh = SubResource("BoxMesh_Size_017")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Reception_North_Right" type="MeshInstance3D" parent="Map/Level1_Walls" index="19" unique_id=600569815]
-transform = Transform3D(3.8, 0, 0, 0, 3, 0, 0, 0, 0.2, 4.0452065, 1.5, -4)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.045206, 1.5, -4)
+mesh = SubResource("BoxMesh_Size_018")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="TopRight_Rooms_MidVertical" type="MeshInstance3D" parent="Map/Level1_Walls" index="20" unique_id=1336727592]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 6, 13, 1.5, -4)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.5, -4)
+mesh = SubResource("BoxMesh_Size_019")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="TopRight_Rooms_MidHorizontal_Left" type="MeshInstance3D" parent="Map/Level1_Walls" index="21" unique_id=435133341]
-transform = Transform3D(3.4, 0, 0, 0, 3, 0, 0, 0, 0.2, 9.7, 1.5, -4)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7, 1.5, -4)
+mesh = SubResource("BoxMesh_Size_020")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="TopRight_Rooms_MidHorizontal_Right" type="MeshInstance3D" parent="Map/Level1_Walls" index="22" unique_id=904878109]
-transform = Transform3D(3.4, 0, 0, 0, 3, 0, 0, 0, 0.2, 16.3, 1.5, -4)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3, 1.5, -4)
+mesh = SubResource("BoxMesh_Size_020")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="TopRight_South_DoorGap_MidSeg" type="MeshInstance3D" parent="Map/Level1_Walls" index="23" unique_id=537439458]
-transform = Transform3D(1.5815021, 0, 0, 0, 3, 0, 0, 0, 0.2, 13.687395, 1.5, -1)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.687395, 1.5, -1)
+mesh = SubResource("BoxMesh_Size_021")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="TopRight_South_DoorGap_RightSeg" type="MeshInstance3D" parent="Map/Level1_Walls" index="24" unique_id=2060354802]
-transform = Transform3D(2, 0, 0, 0, 3, 0, 0, 0, 0.2, 17, 1.5, -1)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1.5, -1)
+mesh = SubResource("BoxMesh_Size_022")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Kitchen_North" type="MeshInstance3D" parent="Map/Level1_Walls" index="25" unique_id=1919228430]
-transform = Transform3D(6.2, 0, 0, 0, 3, 0, 0, 0, 0.2, 12.9, 1.5, 1.2)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9, 1.5, 1.2)
+mesh = SubResource("BoxMesh_Size_023")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Kitchen_West_Upper" type="MeshInstance3D" parent="Map/Level1_Walls" index="26" unique_id=984887583]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 3.3, 9.8, 1.5, 2.85)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 1.5, 2.85)
+mesh = SubResource("BoxMesh_Size_024")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Kitchen_West_Lower" type="MeshInstance3D" parent="Map/Level1_Walls" index="27" unique_id=254295302]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 2, 9.8, 1.5, 7.2)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 1.5, 7.2)
+mesh = SubResource("BoxMesh_Size_025")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Kitchen_Inner_Counter_Back" type="MeshInstance3D" parent="Map/Level1_Walls" index="28" unique_id=852457553]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 0.2, 14.5, 1.5, 6.6)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 1.5, 6.6)
+mesh = SubResource("BoxMesh_Size_026")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Kitchen_Inner_Counter_Side" type="MeshInstance3D" parent="Map/Level1_Walls" index="29" unique_id=1635536301]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 3, 13, 1.5, 8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1.5, 8)
+mesh = SubResource("BoxMesh_Size_027")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="OpenOffice_West_Short" type="MeshInstance3D" parent="Map/Level1_Walls" index="30" unique_id=1593399052]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 8.2, -7.2, 1.5, 4.1)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2, 1.5, 4.1)
+mesh = SubResource("BoxMesh_Size_028")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="OpenOffice_East_Short" type="MeshInstance3D" parent="Map/Level1_Walls" index="31" unique_id=2005078000]
-transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 8.2, 8, 1.5, 4.1)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.5, 4.1)
+mesh = SubResource("BoxMesh_Size_028")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="OpenOffice_North_Short_Left" type="MeshInstance3D" parent="Map/Level1_Walls" index="32" unique_id=327525920]
-transform = Transform3D(4.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -5.0343547, 1.5, 0)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.034355, 1.5, 0)
+mesh = SubResource("BoxMesh_Size_029")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="OpenOffice_North_Short_Right" type="MeshInstance3D" parent="Map/Level1_Walls" index="33" unique_id=1124940181]
-transform = Transform3D(4.5, 0, 0, 0, 3, 0, 0, 0, 0.2, 5.84651, 1.5, 0)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84651, 1.5, 0)
+mesh = SubResource("BoxMesh_Size_029")
 surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 
 [node name="Level1_LowPartitions" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="2" unique_id=1534727355]
 
 [node name="Cubicles_Row1_Back" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="0" unique_id=206374224]
-transform = Transform3D(10.8, 0, 0, 0, 1.35, 0, 0, 0, 0.16, 0.2, 0.675, 2)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.675, 2)
+mesh = SubResource("BoxMesh_Size_030")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Row2_Back" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="1" unique_id=645083216]
-transform = Transform3D(10.8, 0, 0, 0, 1.35, 0, 0, 0, 0.16, 0.2, 0.675, 5)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.675, 5)
+mesh = SubResource("BoxMesh_Size_030")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_1_Top" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="2" unique_id=1817860614]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, -5.2, 0.675, 2.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2, 0.675, 2.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_1_Bottom" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="3" unique_id=889641105]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, -5.2, 0.675, 5.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2, 0.675, 5.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_2_Top" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="4" unique_id=158430245]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, -1.6, 0.675, 2.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0.675, 2.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_2_Bottom" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="5" unique_id=1154334230]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, -1.6, 0.675, 5.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 0.675, 5.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_3_Top" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="6" unique_id=874873928]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, 2, 0.675, 2.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.675, 2.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_3_Bottom" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="7" unique_id=664610471]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, 2, 0.675, 5.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.675, 5.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_4_Top" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="8" unique_id=1930819815]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, 5.6, 0.675, 2.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 0.675, 2.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Vertical_4_Bottom" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="9" unique_id=1749143738]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, 5.6, 0.675, 5.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 0.675, 5.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Center_Divider_A" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="10" unique_id=1062873181]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, -0.2, 0.675, 2.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.675, 2.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Cubicles_Center_Divider_B" type="MeshInstance3D" parent="Map/Level1_LowPartitions" index="11" unique_id=518803856]
-transform = Transform3D(0.16, 0, 0, 0, 1.35, 0, 0, 0, 1.6, -0.2, 0.675, 5.8)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.675, 5.8)
+mesh = SubResource("BoxMesh_Size_031")
 surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 
 [node name="Level1_DoorThresholds" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="3" unique_id=1237920097]
 
 [node name="DoorGap_Conference" type="MeshInstance3D" parent="Map/Level1_DoorThresholds" index="0" unique_id=1030195009]
-transform = Transform3D(1.3, 0, 0, 0, 0.04, 0, 0, 0, 0.04, -9.8, 0.02, -4.03)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8, 0.02, -4.03)
+mesh = SubResource("BoxMesh_Size_032")
 surface_material_override/0 = SubResource("StandardMaterial3D_DoorThreshold")
 
 [node name="DoorGap_Reception" type="MeshInstance3D" parent="Map/Level1_DoorThresholds" index="1" unique_id=1293059192]
-transform = Transform3D(1.2, 0, 0, 0, 0.04, 0, 0, 0, 0.04, -1.4, 0.02, -4.03)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 0.02, -4.03)
+mesh = SubResource("BoxMesh_Size_033")
 surface_material_override/0 = SubResource("StandardMaterial3D_DoorThreshold")
 
 [node name="DoorGap_Kitchen" type="MeshInstance3D" parent="Map/Level1_DoorThresholds" index="2" unique_id=77167424]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 1, 9.8, 0.02, 5.35)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 0.02, 5.35)
+mesh = SubResource("BoxMesh_Size_034")
 surface_material_override/0 = SubResource("StandardMaterial3D_DoorThreshold")
 
 [node name="DoorGap_Office1" type="MeshInstance3D" parent="Map/Level1_DoorThresholds" index="3" unique_id=548350008]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.9, -10.03, 0.02, 0.5)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.03, 0.02, 0.5)
+mesh = SubResource("BoxMesh_Size_035")
 surface_material_override/0 = SubResource("StandardMaterial3D_DoorThreshold")
 
 [node name="DoorGap_Office2" type="MeshInstance3D" parent="Map/Level1_DoorThresholds" index="4" unique_id=197233368]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.7, -10.03, 0.02, 3.55)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.03, 0.02, 3.55)
+mesh = SubResource("BoxMesh_Size_036")
 surface_material_override/0 = SubResource("StandardMaterial3D_DoorThreshold")
 
 [node name="DoorGap_Office3" type="MeshInstance3D" parent="Map/Level1_DoorThresholds" index="5" unique_id=571763934]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.7, -10.03, 0.02, 7.55)
-mesh = SubResource("BoxMesh_Unit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.03, 0.02, 7.55)
+mesh = SubResource("BoxMesh_Size_036")
 surface_material_override/0 = SubResource("StandardMaterial3D_DoorThreshold")
 
 [node name="Level1_PlayerSpawn" type="Marker3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="4" unique_id=915723523]

@@ -9,7 +9,7 @@ class_name ModelViewCamera;
 @export var _sway_multiplier : float = 0.005;
 
 func _process(delta: float) -> void:
-	_rigid.position = lerp(_rigid, Vector3.ZERO, _to_center_lerp_amount * delta);
+	_rigid.position = lerp(_rigid.position, Vector3.ZERO, _to_center_lerp_amount * delta);
 
 func sway(sway_vec : Vector2):
 	_rigid.position.x -= sway_vec.x * _sway_multiplier;

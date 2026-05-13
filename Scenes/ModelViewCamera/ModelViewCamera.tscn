@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://deumpeq7rpils" path="res://Scenes/ModelViewCamera/ModelViewCamera.gd" id="1_43ijt"]
 
 [node name="ModelViewCamera" type="Camera3D" unique_id=1618464063 node_paths=PackedStringArray("_rigid")]
+cull_mask = 2
 script = ExtResource("1_43ijt")
 _rigid = NodePath("Rigid")
 

@@ -1,10 +1,37 @@
 [gd_scene format=3 uid="uid://cfljoef6v3vik"]
 
-[ext_resource type="Texture2D" uid="uid://dstvltbfdmxax" path="res://Assets/UI/PrintableUI/Button/Square/Default@4x.png" id="1_oixgt"]
-[ext_resource type="Texture2D" uid="uid://by7onsn3d2hwc" path="res://Assets/UI/PrintableUI/Button/Square/Hover@4x.png" id="2_nnfad"]
+[ext_resource type="Texture2D" uid="uid://crs40e71lxnnn" path="res://Assets/UI/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Level/Button/Unlocked/Default.png" id="1_oixgt"]
+[ext_resource type="Texture2D" uid="uid://4htdmgv6hu2i" path="res://Assets/UI/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Level/Button/Unlocked/Hover.png" id="2_nnfad"]
+[ext_resource type="Script" uid="uid://dmwnskb3ajxcg" path="res://Scenes/ChooseLevel/LevelButton.gd" id="3_mp4jy"]
+[ext_resource type="LabelSettings" uid="uid://h0mip06uvwtp" path="res://Resources/LabelSettings/LabelFont.tres" id="3_nnfad"]
 
-[node name="LevelButton" type="TextureButton" unique_id=1747780041]
-offset_right = 8.0
-offset_bottom = 8.0
-texture_normal = ExtResource("1_oixgt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_oixgt"]
+atlas = ExtResource("1_oixgt")
+region = Rect2(2.6051178, 0, 82.105515, 81.15553)
+
+[node name="LevelButton" type="TextureButton" unique_id=1747780041 node_paths=PackedStringArray("_level_label")]
+offset_right = 82.0
+offset_bottom = 81.0
+texture_normal = SubResource("AtlasTexture_oixgt")
 texture_hover = ExtResource("2_nnfad")
+script = ExtResource("3_mp4jy")
+_level_label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=130743069]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "01"
+label_settings = ExtResource("3_nnfad")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

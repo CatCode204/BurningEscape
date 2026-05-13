@@ -26,4 +26,4 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1100323496 instance=ExtResource("1_5ufo3")]
 
-[node name="Map" type="StaticBody3D" parent="." unique_id=230124054]
+[node name="Map" type="Node3D" parent="." unique_id=1953703160]

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://caonxiodpeonx"]
+
+[ext_resource type="FontFile" uid="uid://cc8xwl1gxegy0" path="res://Assets/Fonts/BebasNeue-Regular.ttf" id="1_6d74m"]
+[ext_resource type="Script" uid="uid://d1r0phvs4yedj" path="res://Scenes/GameWinHUD/GameWinHUD.gd" id="1_020i2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_020i2"]
+font = ExtResource("1_6d74m")
+font_size = 64
+font_color = Color(0.9098039, 0.8784314, 0.83137256, 1)
+outline_size = 2
+outline_color = Color(1, 0.47843137, 0.101960786, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hc48q"]
+font = ExtResource("1_6d74m")
+font_size = 32
+font_color = Color(0.9098039, 0.8784314, 0.83137256, 1)
+outline_size = 2
+outline_color = Color(1, 0.47843137, 0.101960786, 1)
+
+[node name="GameWinHUD" type="Control" unique_id=2142737006]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_020i2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=987325061]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05882353, 0.08627451, 0.17254902, 0.27450982)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1959160748]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1924896671]
+layout_mode = 2
+text = "CONGRATULATION YOU ESCAPED"
+label_settings = SubResource("LabelSettings_020i2")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1569329892]
+layout_mode = 2
+text = "Press ESC to exit"
+label_settings = SubResource("LabelSettings_hc48q")
+horizontal_alignment = 1

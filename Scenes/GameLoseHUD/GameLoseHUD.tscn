@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://116k1i0eekkr"]
+
+[ext_resource type="Script" uid="uid://b86roth02qpjb" path="res://Scenes/GameLoseHUD/GameLoseHUD.gd" id="1_l3cw7"]
+[ext_resource type="FontFile" uid="uid://cc8xwl1gxegy0" path="res://Assets/Fonts/BebasNeue-Regular.ttf" id="1_vn6ra"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l3cw7"]
+font = ExtResource("1_vn6ra")
+font_size = 64
+font_color = Color(0.9098039, 0.8784314, 0.83137256, 1)
+outline_size = 2
+outline_color = Color(1, 0.47843137, 0.101960786, 1)
+
+[node name="GameLoseHUD" type="Control" unique_id=424256530]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l3cw7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1899010786]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.05882353, 0.08627451, 0.17254902, 0.27450982)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1875704791]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=574914196]
+layout_mode = 2
+text = "You Losed"
+label_settings = SubResource("LabelSettings_l3cw7")
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=1952540883]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=606178834]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_vn6ra")
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=2042247261]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=937406083]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_vn6ra")
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="restart_game"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="exit_level"]

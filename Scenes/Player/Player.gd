@@ -39,6 +39,7 @@ func _ready() -> void:
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
+		_model_view_camera.sway(- event.relative)
 		_head.rotate_y(- event.relative.x * _sensitivity);
 		_eye.rotate_x(-event.relative.y * _sensitivity);
 		_eye.rotation.x = clamp(_eye.rotation.x, deg_to_rad(-40), deg_to_rad(60));

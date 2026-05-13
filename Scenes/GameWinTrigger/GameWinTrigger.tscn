@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://by774k5qn27i0"]
+
+[ext_resource type="Script" uid="uid://dbltqhw6r4i6n" path="res://Scenes/GameWinTrigger/GameWinTrigger.gd" id="1_df56j"]
+
+[node name="GameWinTrigger" type="Area3D" unique_id=1898133292]
+script = ExtResource("1_df56j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1552437605]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

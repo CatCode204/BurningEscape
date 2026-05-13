@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cv5xaplsr3f3c"]
+
+[ext_resource type="Script" uid="uid://do7afu0wu31qd" path="res://Scenes/TriggerAreas/GameLoseTrigger/GameLoseTrigger.gd" id="1_wp1yw"]
+
+[node name="GameLoseTrigger" type="Area3D" unique_id=985701337]
+script = ExtResource("1_wp1yw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=309572010]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

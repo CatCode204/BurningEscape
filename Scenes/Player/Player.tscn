@@ -2,20 +2,68 @@
 
 [ext_resource type="Script" uid="uid://1jwiqp0pjlts" path="res://Scenes/Player/Player.gd" id="1_s0eop"]
 [ext_resource type="Shader" uid="uid://bg6c7m1dh5g3i" path="res://Resources/Shaders/Blur.gdshader" id="2_ft8w5"]
+[ext_resource type="Script" uid="uid://ciceoo6ddmiuk" path="res://Scenes/Player/InventoryUI.gd" id="3_h54ih"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ft8w5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h54ih"]
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_h54ih"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ude3g"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_foam"]
+offsets = PackedFloat32Array(0, 0.05, 0.7, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_foam"]
+gradient = SubResource("Gradient_foam")
+
+[sub_resource type="Curve" id="Curve_foam"]
+_data = [Vector2(0, 0.2), 0.0, 0.0, 0, 0, Vector2(1, 4.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_foam"]
+curve = SubResource("Curve_foam")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jmcll"]
+emission_shape = 1
+emission_sphere_radius = 0.05
+inherit_velocity_ratio = 5.0
+direction = Vector3(0, 1, 0)
+spread = 25.0
+initial_velocity_min = 6.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, -1.2, 0)
+scale_curve = SubResource("CurveTexture_foam")
+color_ramp = SubResource("GradientTexture1D_foam")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wape"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_t26db"]
+material = SubResource("StandardMaterial3D_4wape")
+radius = 0.05
+height = 0.1
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ft8w5"]
 shader = ExtResource("2_ft8w5")
 shader_parameter/blur_amount = 0.0
 
-[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode")]
+[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_interact_raycast", "_extinguisher_model", "_foam_particles")]
 script = ExtResource("1_s0eop")
 _head = NodePath("Head")
 _eye = NodePath("Head/Eye")
 _blurPostProcessNode = NodePath("CanvasLayer/ColorRect")
+_interact_raycast = NodePath("Head/Eye/InteractRaycast")
+_extinguisher_model = NodePath("Head/Eye/Hand/ExtinguisherModel")
+_foam_particles = NodePath("Head/Eye/Hand/ExtinguisherModel/FoamParticles")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815320452]
 shape = SubResource("CapsuleShape3D_ft8w5")
@@ -29,6 +77,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49247277, 0)
 
 [node name="Eye" type="Camera3D" parent="Head" unique_id=1988432482]
 
+[node name="Hand" type="Node3D" parent="Head/Eye" unique_id=846943221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49247277, 0)
+
+[node name="ExtinguisherModel" type="MeshInstance3D" parent="Head/Eye/Hand" unique_id=1169909211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2336142, -0.5359932)
+visible = false
+mesh = SubResource("CylinderMesh_h54ih")
+surface_material_override/0 = SubResource("StandardMaterial3D_ude3g")
+
+[node name="FoamParticles" type="GPUParticles3D" parent="Head/Eye/Hand/ExtinguisherModel" unique_id=1614704863]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.2, 0)
+emitting = false
+amount = 800
+lifetime = 1.4
+randomness = 0.5
+process_material = SubResource("ParticleProcessMaterial_jmcll")
+draw_pass_1 = SubResource("SphereMesh_t26db")
+
+[node name="InteractRaycast" type="RayCast3D" parent="Head/Eye" unique_id=153562486]
+target_position = Vector3(0, 0, -3)
+collision_mask = 2
+collide_with_areas = true
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=132312822]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1800009015]
@@ -39,3 +110,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="InventoryUI" type="Control" parent="CanvasLayer" unique_id=627306626]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_h54ih")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/InventoryUI" unique_id=129330921]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = -16.0
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/InventoryUI/MarginContainer" unique_id=1574969130]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLable" type="Label" parent="CanvasLayer/InventoryUI/MarginContainer/VBoxContainer" unique_id=1158988439]
+layout_mode = 2
+text = "Túi đồ"
+
+[node name="ItemListLabel" type="Label" parent="CanvasLayer/InventoryUI/MarginContainer/VBoxContainer" unique_id=1175995093]
+layout_mode = 2

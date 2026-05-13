@@ -16,7 +16,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8810954, 0.0554626, -21.35
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=230545680]
 
 [node name="Player" parent="." unique_id=1100323496 instance=ExtResource("2_bj7wd")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 11.666, 1.5, -16.161)
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 11.666, 27.875011, -16.161)
 slide_on_ceiling = false
 
 [node name="ManualFloorCollision" type="StaticBody3D" parent="." unique_id=903776765]

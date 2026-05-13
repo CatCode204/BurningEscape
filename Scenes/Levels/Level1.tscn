@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ngssft013v3y"]
 
 [ext_resource type="PackedScene" uid="uid://dxvoou1mm281t" path="res://Scenes/LevelBase/LevelBase.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://c1bu5m1jg2tpy" path="res://Classes/Interactables/PickupItem.gd" id="2_36ke7"]
+[ext_resource type="PackedScene" path="res://Scenes/Gameplay/FireHazard.tscn" id="3_riv1q"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_Floor_All"]
 resource_local_to_scene = true
@@ -389,21 +391,33 @@ size = Vector3(0.16, 1.35, 1.6)
 resource_local_to_scene = true
 size = Vector3(0.16, 1.35, 1.6)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_36ke7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_36ke7"]
+
 [node name="Level1" unique_id=1648026258 instance=ExtResource("1_base")]
 
-[node name="Level1_Floor" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="0" unique_id=1851654704]
+[node name="FoamParticles" parent="Player/Head/Eye/Hand/ExtinguisherModel" parent_id_path=PackedInt32Array(1100323496, 1169909211) index="0" unique_id=1614704863]
+amount = 219
+lifetime = 1.2
+
+[node name="Map" parent="." index="3" unique_id=230124054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3665576, 0)
+
+[node name="Level1_Floor" type="Node3D" parent="Map" index="0" unique_id=1851654704]
 
 [node name="Floor_All" type="StaticBody3D" parent="Map/Level1_Floor" index="0" unique_id=648538334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/Level1_Floor/Floor_All" index="0" unique_id=2028153490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125386715, -0.012248993, 0.026710153)
 mesh = SubResource("BoxMesh_Floor_All")
 surface_material_override/0 = SubResource("StandardMaterial3D_Floor")
 
 [node name="Collision" type="CollisionShape3D" parent="Map/Level1_Floor/Floor_All" index="1" unique_id=1954624447]
 shape = SubResource("BoxShape_Floor_All")
 
-[node name="Level1_Walls" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="1" unique_id=1146009264]
+[node name="Level1_Walls" type="Node3D" parent="Map" index="1" unique_id=1146009264]
 
 [node name="Outer_Conference_North" type="StaticBody3D" parent="Map/Level1_Walls" index="0" unique_id=104090176]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.5, -11)
@@ -745,7 +759,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_WallWhite")
 [node name="Collision" type="CollisionShape3D" parent="Map/Level1_Walls/OpenOffice_North_Short_Right" index="1" unique_id=267750140]
 shape = SubResource("BoxShape_OpenOffice_North_Short_Right")
 
-[node name="Level1_LowPartitions" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="2" unique_id=1534727355]
+[node name="Level1_LowPartitions" type="Node3D" parent="Map" index="2" unique_id=1534727355]
 
 [node name="Cubicles_Row1_Back" type="StaticBody3D" parent="Map/Level1_LowPartitions" index="0" unique_id=206374224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.675, 2)
@@ -867,7 +881,24 @@ surface_material_override/0 = SubResource("StandardMaterial3D_LowPartition")
 [node name="Collision" type="CollisionShape3D" parent="Map/Level1_LowPartitions/Cubicles_Center_Divider_B" index="1" unique_id=764186421]
 shape = SubResource("BoxShape_Cubicles_Center_Divider_B")
 
-[node name="Level1_PlayerSpawn" type="Marker3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="3" unique_id=915723523]
+[node name="Level1_PlayerSpawn" type="Marker3D" parent="Map" index="3" unique_id=915723523]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, 0.05, -2.2)
 
-[node name="Level1_LevelBounds" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(230124054) index="4" unique_id=1737446668]
+[node name="Level1_LevelBounds" type="Node3D" parent="Map" index="4" unique_id=1737446668]
+
+[node name="Area3D" type="Area3D" parent="." index="4" unique_id=467562224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5346096, 0)
+collision_layer = 2
+script = ExtResource("2_36ke7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=289601003]
+shape = SubResource("BoxShape3D_36ke7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" index="1" unique_id=1849479932]
+layers = 2
+mesh = SubResource("BoxMesh_36ke7")
+
+[node name="FireHazard" parent="." index="5" unique_id=558657941 instance=ExtResource("3_riv1q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0475552, 0.41199303, -9.592638)
+
+[editable path="Player"]

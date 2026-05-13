@@ -25,6 +25,8 @@ const ACTION_MOVE_SPRINT : String = "move_sprint";
 @export var _head : Node3D;
 @export var _eye : Camera3D;
 @export var _blurPostProcessNode : ColorRect;
+@export var _sub_view_port : SubViewport;
+@export var _model_view_camera : ModelViewCamera;
 
 var _current_speed : float = 0.0;
 var _t_bob : float = 0.0;
@@ -32,6 +34,7 @@ var _t_bob : float = 0.0;
 const GRAVITY : float = 9.8;
 
 func _ready() -> void:
+	_sub_view_port.size = DisplayServer.window_get_size()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 
 func _unhandled_input(event):

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cw1k70jnku5am"
+path="res://.godot/imported/Prop_Exterior_Shutter_Raised_Panel.obj-806e06fb9a24447ec71780078a0e7888.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Exterior_Shutter_Raised_Panel.obj-806e06fb9a24447ec71780078a0e7888.mesh"]
+
+source_file="res://Assets/Models/modular_house_collection/Prop_Exterior_Shutter_Raised_Panel.obj"
+dest_files=["res://.godot/imported/Prop_Exterior_Shutter_Raised_Panel.obj-806e06fb9a24447ec71780078a0e7888.mesh", "res://.godot/imported/Prop_Exterior_Shutter_Raised_Panel.obj-806e06fb9a24447ec71780078a0e7888.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

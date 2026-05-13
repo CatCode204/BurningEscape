@@ -12,11 +12,13 @@
 shader = ExtResource("2_ft8w5")
 shader_parameter/blur_amount = 0.0
 
-[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode")]
+[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_sub_view_port", "_model_view_camera")]
 script = ExtResource("1_s0eop")
 _head = NodePath("Head")
 _eye = NodePath("Head/Eye")
 _blurPostProcessNode = NodePath("CanvasLayer/ColorRect")
+_sub_view_port = NodePath("Head/Eye/SubViewportContainer/SubViewport")
+_model_view_camera = NodePath("Head/Eye/SubViewportContainer/SubViewport/ModelViewCamera")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815320452]
 shape = SubResource("CapsuleShape3D_ft8w5")

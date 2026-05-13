@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bogn7m80gbqx1"]
+
+[ext_resource type="FontFile" uid="uid://cc8xwl1gxegy0" path="res://Assets/Fonts/BebasNeue-Regular.ttf" id="1_wgwvo"]
+
+[resource]
+default_font = ExtResource("1_wgwvo")
+default_font_size = 24

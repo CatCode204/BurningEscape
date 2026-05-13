@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://bru4pil6lwkos"]
+
+[ext_resource type="Texture2D" uid="uid://bki0pegopb6mx" path="res://Assets/Images/BurningEscapeMainMenu.png" id="1_cdkru"]
+[ext_resource type="Script" uid="uid://dmg1sfbc1epun" path="res://Scenes/MainMenu/MainMenu.gd" id="1_sg7ab"]
+[ext_resource type="FontFile" uid="uid://cc8xwl1gxegy0" path="res://Assets/Fonts/BebasNeue-Regular.ttf" id="2_c7oo3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nl4gn"]
+font = ExtResource("2_c7oo3")
+font_size = 48
+font_color = Color(0.9098039, 0.8784314, 0.83137256, 1)
+outline_size = 2
+outline_color = Color(1, 0.47843137, 0.101960786, 1)
+
+[sub_resource type="Theme" id="Theme_sg7ab"]
+default_font = ExtResource("2_c7oo3")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sg7ab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpx3y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ua038"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sg7ab"]
+font = ExtResource("2_c7oo3")
+font_size = 12
+
+[node name="MainMenu" type="Control" unique_id=1988374071]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sg7ab")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1310603588]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cdkru")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=906214323]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=751907021]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=343513255]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "BURNING ESCAPE"
+label_settings = SubResource("LabelSettings_nl4gn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer" unique_id=220351537]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1163830509]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_sg7ab")
+theme_override_colors/font_color = Color(0.9098039, 0.8784314, 0.83137256, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.05490196, 0.16470589, 1)
+theme_override_colors/font_outline_color = Color(1, 0.47843137, 0.101960786, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_c7oo3")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sg7ab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kpx3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ua038")
+text = "START"
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=794685910]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1958348510]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_sg7ab")
+theme_override_colors/font_color = Color(0.9098039, 0.8784314, 0.83137256, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.05490196, 0.16470589, 1)
+theme_override_colors/font_outline_color = Color(1, 0.47843137, 0.101960786, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_c7oo3")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sg7ab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kpx3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ua038")
+text = "SETTINGS"
+
+[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1784607062]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1721304763]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_sg7ab")
+theme_override_colors/font_color = Color(0.9098039, 0.8784314, 0.83137256, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.05490196, 0.16470589, 1)
+theme_override_colors/font_outline_color = Color(1, 0.47843137, 0.101960786, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_c7oo3")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sg7ab")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kpx3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ua038")
+text = "EXIT"
+
+[node name="Version" type="Label" parent="MarginContainer" unique_id=533825815]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "VERSION 1.0"
+label_settings = SubResource("LabelSettings_sg7ab")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="choose_level"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="exit_game"]

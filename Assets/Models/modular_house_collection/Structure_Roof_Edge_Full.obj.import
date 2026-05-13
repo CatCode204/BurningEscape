@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://die3x4kikqwn7"
+path="res://.godot/imported/Structure_Roof_Edge_Full.obj-eadf9433d9b027b3c70e710f01b2ee94.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Structure_Roof_Edge_Full.obj-eadf9433d9b027b3c70e710f01b2ee94.mesh"]
+
+source_file="res://Assets/Models/modular_house_collection/Structure_Roof_Edge_Full.obj"
+dest_files=["res://.godot/imported/Structure_Roof_Edge_Full.obj-eadf9433d9b027b3c70e710f01b2ee94.mesh", "res://.godot/imported/Structure_Roof_Edge_Full.obj-eadf9433d9b027b3c70e710f01b2ee94.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

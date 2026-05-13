@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cfljoef6v3vik"]
+
+[ext_resource type="Texture2D" uid="uid://dstvltbfdmxax" path="res://Assets/UI/PrintableUI/Button/Square/Default@4x.png" id="1_oixgt"]
+[ext_resource type="Texture2D" uid="uid://by7onsn3d2hwc" path="res://Assets/UI/PrintableUI/Button/Square/Hover@4x.png" id="2_nnfad"]
+
+[node name="LevelButton" type="TextureButton" unique_id=1747780041]
+offset_right = 8.0
+offset_bottom = 8.0
+texture_normal = ExtResource("1_oixgt")
+texture_hover = ExtResource("2_nnfad")

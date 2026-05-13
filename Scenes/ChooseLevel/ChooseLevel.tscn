@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bympjahp8fy7g"]
+
+[ext_resource type="Texture2D" uid="uid://bki0pegopb6mx" path="res://Assets/Images/BurningEscapeMainMenu.png" id="1_icvke"]
+
+[node name="ChooseLevel" type="Control" unique_id=1676842892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1172151758]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_icvke")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=475180746]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=2068689475]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 4

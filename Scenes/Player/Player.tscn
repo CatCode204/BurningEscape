@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://1jwiqp0pjlts" path="res://Scenes/Player/Player.gd" id="1_s0eop"]
 [ext_resource type="Shader" uid="uid://bg6c7m1dh5g3i" path="res://Resources/Shaders/Blur.gdshader" id="2_ft8w5"]
 [ext_resource type="PackedScene" uid="uid://bif80jcu1q2vc" path="res://Scenes/ModelViewCamera/ModelViewCamera.tscn" id="2_h54ih"]
-[ext_resource type="Script" path="res://Scenes/Player/InventoryUI.gd" id="3_h54ih"]
-
+[ext_resource type="Script" uid="uid://ciceoo6ddmiuk" path="res://Scenes/Player/InventoryUI.gd" id="3_h54ih"]
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ft8w5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h54ih"]
@@ -57,16 +56,28 @@ height = 0.1
 shader = ExtResource("2_ft8w5")
 shader_parameter/blur_amount = 0.0
 
+<<<<<<< HEAD
 [node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_interact_raycast", "_extinguisher_model", "_foam_particles", "_sub_view_port", "_model_view_camera")]
+=======
+[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_interact_raycast", "_extinguisher_model", "_foam_particles")]
+>>>>>>> 5fdce7824aa51d9d02bf1ce72f23ce5318358481
 script = ExtResource("1_s0eop")
 _head = NodePath("Head")
 _eye = NodePath("Head/Eye")
 _blurPostProcessNode = NodePath("CanvasLayer/ColorRect")
+<<<<<<< HEAD
 _interact_raycast = NodePath("Head/Eye/InteractRaycast")
 _extinguisher_model = NodePath("Head/Eye/Hand/ExtinguisherModel")
 _foam_particles = NodePath("Head/Eye/Hand/ExtinguisherModel/FoamParticles")
 _sub_view_port = NodePath("Head/Eye/SubViewportContainer/SubViewport")
 _model_view_camera = NodePath("Head/Eye/SubViewportContainer/SubViewport/ModelViewCamera")
+=======
+_sub_view_port = NodePath("Head/Eye/SubViewportContainer/SubViewport")
+_model_view_camera = NodePath("Head/Eye/SubViewportContainer/SubViewport/ModelViewCamera")
+_interact_raycast = NodePath("Head/Eye/InteractRaycast")
+_extinguisher_model = NodePath("Head/Eye/Hand/ExtinguisherModel")
+_foam_particles = NodePath("Head/Eye/Hand/ExtinguisherModel/FoamParticles")
+>>>>>>> 5fdce7824aa51d9d02bf1ce72f23ce5318358481
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815320452]
 shape = SubResource("CapsuleShape3D_ft8w5")

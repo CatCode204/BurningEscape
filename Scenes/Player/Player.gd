@@ -31,7 +31,6 @@ const ACTION_USE : String = "use_item"
 @export var _interact_raycast : RayCast3D; # Raycast để tương tác
 @export var _extinguisher_model : MeshInstance3D
 @export var _foam_particles : GPUParticles3D
-@export var _sub_view_port : SubViewport;
 @export var _model_view_camera : ModelViewCamera;
 
 var _current_speed : float = 0.0;
@@ -40,12 +39,10 @@ var _t_bob : float = 0.0;
 const GRAVITY : float = 9.8;
 
 func _ready() -> void:
-	_sub_view_port.size = DisplayServer.window_get_size()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
-		_model_view_camera.sway(- event.relative)
 		_head.rotate_y(- event.relative.x * _sensitivity);
 		_eye.rotate_x(-event.relative.y * _sensitivity);
 		_eye.rotation.x = clamp(_eye.rotation.x, deg_to_rad(-40), deg_to_rad(60));

@@ -2,6 +2,8 @@ extends Node
 
 signal on_player_death()
 signal on_game_win()
+signal inventory_updated(items: Array)
+signal item_equipped(item_name: String)
 
 signal on_level_exit()
 signal on_level_restart()

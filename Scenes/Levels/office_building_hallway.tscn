@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bjcqukx2ctd6q"]
+
+[ext_resource type="PackedScene" uid="uid://blum0yi26kugg" path="res://Scenes/Levels/office_building_hallway/office_building_hallway.glb" id="1_yhirr"]
+[ext_resource type="PackedScene" uid="uid://biflcnb8xmo0b" path="res://Scenes/Player/Player.tscn" id="2_bj7wd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_euvim"]
+size = Vector3(1000, 1, 1000)
+
+[node name="office_building_hallway" type="Node3D" unique_id=1786783595]
+
+[node name="Sketchfab_Scene" parent="." unique_id=1981176349 instance=ExtResource("1_yhirr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8810954, 0.0554626, -21.352201)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=344994213]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=230545680]
+
+[node name="Player" parent="." unique_id=1100323496 instance=ExtResource("2_bj7wd")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 11.666, 27.875011, -16.161)
+slide_on_ceiling = false
+
+[node name="ManualFloorCollision" type="StaticBody3D" parent="." unique_id=903776765]
+transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, -0.8969569, 0.02179408, -21.357464)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ManualFloorCollision" unique_id=186506824]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("BoxShape3D_euvim")

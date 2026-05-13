@@ -2,12 +2,8 @@
 
 [ext_resource type="Script" uid="uid://1jwiqp0pjlts" path="res://Scenes/Player/Player.gd" id="1_s0eop"]
 [ext_resource type="Shader" uid="uid://bg6c7m1dh5g3i" path="res://Resources/Shaders/Blur.gdshader" id="2_ft8w5"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bif80jcu1q2vc" path="res://Scenes/ModelViewCamera/ModelViewCamera.tscn" id="2_h54ih"]
-=======
 [ext_resource type="Script" uid="uid://ciceoo6ddmiuk" path="res://Scenes/Player/InventoryUI.gd" id="3_h54ih"]
->>>>>>> inventory
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ft8w5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h54ih"]
@@ -60,23 +56,16 @@ height = 0.1
 shader = ExtResource("2_ft8w5")
 shader_parameter/blur_amount = 0.0
 
-<<<<<<< HEAD
-[node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_sub_view_port", "_model_view_camera")]
-=======
 [node name="Player" type="CharacterBody3D" unique_id=1100323496 node_paths=PackedStringArray("_head", "_eye", "_blurPostProcessNode", "_interact_raycast", "_extinguisher_model", "_foam_particles")]
->>>>>>> inventory
 script = ExtResource("1_s0eop")
 _head = NodePath("Head")
 _eye = NodePath("Head/Eye")
 _blurPostProcessNode = NodePath("CanvasLayer/ColorRect")
-<<<<<<< HEAD
 _sub_view_port = NodePath("Head/Eye/SubViewportContainer/SubViewport")
 _model_view_camera = NodePath("Head/Eye/SubViewportContainer/SubViewport/ModelViewCamera")
-=======
 _interact_raycast = NodePath("Head/Eye/InteractRaycast")
 _extinguisher_model = NodePath("Head/Eye/Hand/ExtinguisherModel")
 _foam_particles = NodePath("Head/Eye/Hand/ExtinguisherModel/FoamParticles")
->>>>>>> inventory
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815320452]
 shape = SubResource("CapsuleShape3D_ft8w5")
@@ -90,7 +79,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49247277, 0)
 
 [node name="Eye" type="Camera3D" parent="Head" unique_id=1988432482]
 
-<<<<<<< HEAD
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Head/Eye" unique_id=1430300522]
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,7 +92,7 @@ handle_input_locally = false
 render_target_update_mode = 4
 
 [node name="ModelViewCamera" parent="Head/Eye/SubViewportContainer/SubViewport" unique_id=1618464063 instance=ExtResource("2_h54ih")]
-=======
+
 [node name="Hand" type="Node3D" parent="Head/Eye" unique_id=846943221]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49247277, 0)
 
@@ -127,7 +115,6 @@ draw_pass_1 = SubResource("SphereMesh_t26db")
 target_position = Vector3(0, 0, -3)
 collision_mask = 2
 collide_with_areas = true
->>>>>>> inventory
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=132312822]
 

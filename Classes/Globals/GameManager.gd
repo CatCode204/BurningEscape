@@ -5,7 +5,8 @@ const CHOOSE_LEVEL_PACKED_SCENE : PackedScene = preload("res://Scenes/ChooseLeve
 
 const LEVEL_PACKED_SCENES : Array[PackedScene] = [
 	preload("res://Scenes/Levels/Level1.tscn"),
-	preload("res://Scenes/Levels/Level2.tscn")
+	preload("res://Scenes/Levels/Level2.tscn"),
+	preload("res://Scenes/Levels/Level3.tscn")
 ]
 
 func get_number_levels():

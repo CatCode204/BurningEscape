@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cmb0wsx80o7sm"]
+
+[ext_resource type="Script" uid="uid://cjqcln5h8khxp" path="res://Classes/Gameplay/Extinguisher_Hand.gd" id="1_ext_hand"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h54ih"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ude3g"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_foam"]
+offsets = PackedFloat32Array(0, 0.05, 0.7, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_foam"]
+gradient = SubResource("Gradient_foam")
+
+[sub_resource type="Curve" id="Curve_foam"]
+_data = [Vector2(0, 0.2), 0.0, 0.0, 0, 0, Vector2(1, 4.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_foam"]
+curve = SubResource("Curve_foam")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jmcll"]
+emission_shape = 1
+emission_sphere_radius = 0.05
+direction = Vector3(0, 0, -1)
+spread = 20.0
+initial_velocity_min = 6.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, -1.2, 0)
+scale_curve = SubResource("CurveTexture_foam")
+color_ramp = SubResource("GradientTexture1D_foam")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wape"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_t26db"]
+material = SubResource("StandardMaterial3D_4wape")
+radius = 0.05
+height = 0.1
+
+[node name="Extinguisher_Hand" type="Node3D" unique_id=2025024732]
+script = ExtResource("1_ext_hand")
+
+[node name="ExtinguisherModel" type="MeshInstance3D" parent="." unique_id=1483257824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15)
+mesh = SubResource("CylinderMesh_h54ih")
+surface_material_override/0 = SubResource("StandardMaterial3D_ude3g")
+
+[node name="FoamParticles" type="GPUParticles3D" parent="." unique_id=903096508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.35)
+emitting = false
+amount = 800
+lifetime = 1.4
+randomness = 0.5
+process_material = SubResource("ParticleProcessMaterial_jmcll")
+draw_pass_1 = SubResource("SphereMesh_t26db")

@@ -35,7 +35,7 @@ func open_door() -> void:
 		DoorType.Rotate:
 			tween.tween_property(self, "rotation", _init_rotation + deg_to_rad(_rotation_amount) * _rotation_axis, _speed).set_trans(_transition).set_ease(_easing)
 	tween.tween_interval(close_time)
-	tween.tween_callback()
+	tween.tween_callback(close_door)
 
 func close_door() -> void:
 	var tween : Tween = get_tree().create_tween()

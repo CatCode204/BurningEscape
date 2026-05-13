@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dxvoou1mm281t" path="res://Scenes/LevelBase/LevelBase.tscn" id="1_base"]
 [ext_resource type="Script" uid="uid://c1bu5m1jg2tpy" path="res://Classes/Interactables/PickupItem.gd" id="2_36ke7"]
-[ext_resource type="PackedScene" uid="uid://bndiu720656cc" path="res://Scenes/Gameplay/FireHazard.tscn" id="3_riv1q"]
+[ext_resource type="PackedScene" uid="uid://bndiu720656cc" path="res://Scenes/GamePlay/FireHazard.tscn" id="3_riv1q"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_Floor_All"]
 resource_local_to_scene = true
@@ -299,30 +299,6 @@ size = Vector3(10.8, 1.35, 0.16)
 albedo_color = Color(0.94, 0.94, 0.94, 1)
 roughness = 0.85
 
-[sub_resource type="BoxMesh" id="BoxMesh_g7m6b"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_yonwx"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_pxnke"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_cdkm7"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_ag0r0"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_0373u"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_jxcpn"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_s0x8o"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_fkdqx"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_qw1mm"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_54pwg"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_uoc1g"]
-
 [sub_resource type="BoxShape3D" id="BoxShape_Cubicles_Row1_Back"]
 resource_local_to_scene = true
 size = Vector3(10.8, 1.35, 0.16)
@@ -425,7 +401,7 @@ size = Vector3(0.16, 1.35, 1.6)
 amount = 219
 lifetime = 1.2
 
-[node name="Map" parent="." index="3" unique_id=230124054]
+[node name="Map" parent="." index="3" unique_id=1953703160]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3665576, 0)
 
 [node name="Level1_Floor" type="Node3D" parent="Map" index="0" unique_id=1851654704]

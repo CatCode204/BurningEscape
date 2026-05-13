@@ -19,6 +19,9 @@
 [ext_resource type="ArrayMesh" uid="uid://bn5hxsy1ff2a3" path="res://Assets/Models/modular_house_collection/Structure_Kitchen_Cabinet_Base_Sink.obj" id="17_ya3ly"]
 [ext_resource type="ArrayMesh" uid="uid://cg3r50ufky7rc" path="res://Assets/Models/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Full.obj" id="18_ok1eh"]
 [ext_resource type="ArrayMesh" uid="uid://chwo8rg3trxxa" path="res://Assets/Models/modular_house_collection/Structure_Kitchen_Cabinet_Wall_Open.obj" id="19_rl2o4"]
+[ext_resource type="ArrayMesh" uid="uid://dm6up7lvafciv" path="res://Assets/Models/modular_house_collection/Prop_Dining_Room_Table_Rectangle.obj" id="20_rsd5h"]
+[ext_resource type="ArrayMesh" uid="uid://d1ml30w5v84o8" path="res://Assets/Models/modular_house_collection/Prop_Dining_Room_Chair.obj" id="21_tbesk"]
+[ext_resource type="PackedScene" uid="uid://dfr8xgg2gtnob" path="res://Scenes/Door/Door.tscn" id="22_tbesk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_Floor_28m_x_23m"]
 resource_local_to_scene = true
@@ -475,74 +478,6 @@ size = Vector3(0.2, 1.2, 4)
 resource_local_to_scene = true
 size = Vector3(0.2, 1.2, 4)
 
-[sub_resource type="BoxMesh" id="BoxMesh_Door_Bedroom1_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="StandardMaterial3D" id="MatDoor"]
-albedo_color = Color(0.45, 0.26, 0.12, 1)
-roughness = 0.65
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_Bedroom1_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxMesh" id="BoxMesh_Door_BathStore_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_BathStore_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxMesh" id="BoxMesh_Door_Kitchen_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(0.16, 2.4, 5)
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_Kitchen_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(0.16, 2.4, 5)
-
-[sub_resource type="BoxMesh" id="BoxMesh_Door_Bedroom2_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_Bedroom2_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxMesh" id="BoxMesh_Door_Living_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_Living_To_MainHall"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxMesh" id="BoxMesh_Door_Garage_To_Living"]
-resource_local_to_scene = true
-size = Vector3(0.16, 2.4, 3)
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_Garage_To_Living"]
-resource_local_to_scene = true
-size = Vector3(0.16, 2.4, 3)
-
-[sub_resource type="BoxMesh" id="BoxMesh_Door_Garage_Outer"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_Garage_Outer"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxMesh" id="BoxMesh_Door_Main_Entrance"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
-[sub_resource type="BoxShape3D" id="BoxShape_Door_Main_Entrance"]
-resource_local_to_scene = true
-size = Vector3(5, 2.4, 0.16)
-
 [sub_resource type="BoxMesh" id="BoxMesh_Roof_Ceiling_Rectangle_28x23"]
 resource_local_to_scene = true
 size = Vector3(29, 0.18, 24)
@@ -651,6 +586,12 @@ size = Vector3(1, 1.0266876, 0.8446045)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ok1eh"]
 size = Vector3(1, 0.9940491, 0.852417)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gyiht"]
+size = Vector3(2.9767685, 0.957489, 1.8341064)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ljym"]
+size = Vector3(0.5168762, 0.53518677, 0.6305237)
 
 [node name="Level2" unique_id=2065484020 instance=ExtResource("1_base")]
 
@@ -1004,9 +945,10 @@ surface_material_override/0 = SubResource("MatWall")
 shape = SubResource("BoxShape_Inner_X10_Bedroom1_Bath")
 
 [node name="Inner_X16_Hall_Kitchen_Door_Lower" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Walls" index="33" unique_id=1729922756]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4.240891, 2, 1.5, -1.597261)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X16_Hall_Kitchen_Door_Lower" index="0" unique_id=563939024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2275, 0, 0, 0.3876187)
 mesh = SubResource("BoxMesh_Inner_X16_Hall_Kitchen_Door_Lower")
 surface_material_override/0 = SubResource("MatWall")
 
@@ -1017,6 +959,7 @@ shape = SubResource("BoxShape_Inner_X16_Hall_Kitchen_Door_Lower")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 4)
 
 [node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Walls/Inner_X16_Hall_Kitchen_Door_Upper" index="0" unique_id=558050354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0856801, 0, 0, 0)
 mesh = SubResource("BoxMesh_Inner_X16_Hall_Kitchen_Door_Upper")
 surface_material_override/0 = SubResource("MatWall")
 
@@ -1216,88 +1159,8 @@ shape = SubResource("BoxShape_Window_Kitchen_East_Glass")
 
 [node name="Doors" type="Node3D" parent="Map/House_NoRoof_DebugView" index="3" unique_id=1540106453]
 
-[node name="Door_Bedroom1_To_MainHall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="0" unique_id=429081371]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.2, 4.5)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Bedroom1_To_MainHall" index="0" unique_id=1062934121]
-mesh = SubResource("BoxMesh_Door_Bedroom1_To_MainHall")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Bedroom1_To_MainHall" index="1" unique_id=78854284]
-shape = SubResource("BoxShape_Door_Bedroom1_To_MainHall")
-
-[node name="Door_BathStore_To_MainHall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="1" unique_id=964538182]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.2, 4.5)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_BathStore_To_MainHall" index="0" unique_id=6401646]
-mesh = SubResource("BoxMesh_Door_BathStore_To_MainHall")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_BathStore_To_MainHall" index="1" unique_id=693488272]
-shape = SubResource("BoxShape_Door_BathStore_To_MainHall")
-
-[node name="Door_Kitchen_To_MainHall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="2" unique_id=267647173]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.2, 1)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Kitchen_To_MainHall" index="0" unique_id=1783402359]
-mesh = SubResource("BoxMesh_Door_Kitchen_To_MainHall")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Kitchen_To_MainHall" index="1" unique_id=208344094]
-shape = SubResource("BoxShape_Door_Kitchen_To_MainHall")
-
-[node name="Door_Bedroom2_To_MainHall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="3" unique_id=868250418]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1.2, -2.5)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Bedroom2_To_MainHall" index="0" unique_id=901608372]
-mesh = SubResource("BoxMesh_Door_Bedroom2_To_MainHall")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Bedroom2_To_MainHall" index="1" unique_id=1114611166]
-shape = SubResource("BoxShape_Door_Bedroom2_To_MainHall")
-
-[node name="Door_Living_To_MainHall" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="4" unique_id=959311633]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.2, -2.5)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Living_To_MainHall" index="0" unique_id=838738351]
-mesh = SubResource("BoxMesh_Door_Living_To_MainHall")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Living_To_MainHall" index="1" unique_id=299442530]
-shape = SubResource("BoxShape_Door_Living_To_MainHall")
-
-[node name="Door_Garage_To_Living" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="5" unique_id=1561094992]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.2, -10)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Garage_To_Living" index="0" unique_id=369695362]
-mesh = SubResource("BoxMesh_Door_Garage_To_Living")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Garage_To_Living" index="1" unique_id=1835040872]
-shape = SubResource("BoxShape_Door_Garage_To_Living")
-
-[node name="Door_Garage_Outer" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="6" unique_id=1319126246]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.2, -11.4)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Garage_Outer" index="0" unique_id=2127822319]
-mesh = SubResource("BoxMesh_Door_Garage_Outer")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Garage_Outer" index="1" unique_id=686977739]
-shape = SubResource("BoxShape_Door_Garage_Outer")
-
-[node name="Door_Main_Entrance" type="StaticBody3D" parent="Map/House_NoRoof_DebugView/Doors" index="7" unique_id=295973057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 1.2, -11.4)
-
-[node name="Visual" type="MeshInstance3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Main_Entrance" index="0" unique_id=1400153753]
-mesh = SubResource("BoxMesh_Door_Main_Entrance")
-surface_material_override/0 = SubResource("MatDoor")
-
-[node name="Collision" type="CollisionShape3D" parent="Map/House_NoRoof_DebugView/Doors/Door_Main_Entrance" index="1" unique_id=1922806582]
-shape = SubResource("BoxShape_Door_Main_Entrance")
-
 [node name="Roof" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="1" unique_id=44708172]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.37477, 6.45114, 0.51849747)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75725174, -0.0040597916, 0.51849747)
 
 [node name="Roof_Ceiling_Rectangle_28x23" type="StaticBody3D" parent="Map/Roof" index="0" unique_id=807128098]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.05, 0)
@@ -1379,12 +1242,7 @@ surface_material_override/0 = SubResource("MatRoof")
 [node name="Collision" type="CollisionShape3D" parent="Map/Roof/Roof_Right_Eave" index="1" unique_id=422374367]
 shape = SubResource("BoxShape_Roof_Right_Eave")
 
-[node name="Level2_PlayerSpawn" type="Marker3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="2" unique_id=1038859350]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
-
-[node name="Level2_LevelBounds" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="3" unique_id=143444524]
-
-[node name="Props" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="4" unique_id=1756048130]
+[node name="Props" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="2" unique_id=1756048130]
 
 [node name="BathroomShower" type="StaticBody3D" parent="Map/Props" index="0" unique_id=487023711]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.079332)
@@ -1397,19 +1255,15 @@ mesh = ExtResource("2_svn12")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.49804688)
 shape = SubResource("BoxShape3D_4rk67")
 
-[node name="BathroomShowerCurtain" type="MeshInstance3D" parent="Map/Props" index="1" unique_id=1341368668]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2114661, 0, 9.6628)
-mesh = ExtResource("3_smuj1")
-
-[node name="BathroomShowerCurtain2" type="MeshInstance3D" parent="Map/Props" index="2" unique_id=1751800664]
+[node name="BathroomShowerCurtain2" type="MeshInstance3D" parent="Map/Props" index="1" unique_id=1751800664]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.1870828, 0, 11.043151)
 mesh = ExtResource("3_smuj1")
 
-[node name="BathroomShowerCurtain3" type="MeshInstance3D" parent="Map/Props" index="3" unique_id=2098622467]
+[node name="BathroomShowerCurtain3" type="MeshInstance3D" parent="Map/Props" index="2" unique_id=2098622467]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.1870828, 0, 10.073262)
 mesh = ExtResource("3_smuj1")
 
-[node name="Toilet" type="StaticBody3D" parent="Map/Props" index="4" unique_id=1342778165]
+[node name="Toilet" type="StaticBody3D" parent="Map/Props" index="3" unique_id=1342778165]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.853372, 0, 10.849165)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Toilet" index="0" unique_id=1520283322]
@@ -1419,11 +1273,11 @@ mesh = ExtResource("4_smuj1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024902344, 0.48583984, 0)
 shape = SubResource("BoxShape3D_5iseo")
 
-[node name="ToiletPaper" type="MeshInstance3D" parent="Map/Props" index="5" unique_id=137874457]
+[node name="ToiletPaper" type="MeshInstance3D" parent="Map/Props" index="4" unique_id=137874457]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.22035491, 0, 11.199558)
 mesh = ExtResource("5_f8qf7")
 
-[node name="Bed" type="StaticBody3D" parent="Map/Props" index="6" unique_id=935757865]
+[node name="Bed" type="StaticBody3D" parent="Map/Props" index="5" unique_id=935757865]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.974924, 0, 10.478917)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Bed" index="0" unique_id=796077356]
@@ -1433,7 +1287,7 @@ mesh = ExtResource("6_lmdar")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016998291, 0.4882784, 0.028442383)
 shape = SubResource("BoxShape3D_ipaot")
 
-[node name="Bed2" type="StaticBody3D" parent="Map/Props" index="7" unique_id=1023715822]
+[node name="Bed2" type="StaticBody3D" parent="Map/Props" index="6" unique_id=1023715822]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.974924, 0, -6.6023803)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Bed2" index="0" unique_id=2056966891]
@@ -1443,7 +1297,7 @@ mesh = ExtResource("6_lmdar")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016998291, 0.4882784, 0.028442383)
 shape = SubResource("BoxShape3D_ipaot")
 
-[node name="BedDresserDouble" type="StaticBody3D" parent="Map/Props" index="8" unique_id=9033750]
+[node name="BedDresserDouble" type="StaticBody3D" parent="Map/Props" index="7" unique_id=9033750]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.150461, 0, 5.012702)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/BedDresserDouble" index="0" unique_id=879311496]
@@ -1453,7 +1307,7 @@ mesh = ExtResource("7_d1swa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41070557, 0.47001648, 0.0032958984)
 shape = SubResource("BoxShape3D_ao4h1")
 
-[node name="BedDresserDouble2" type="StaticBody3D" parent="Map/Props" index="9" unique_id=1644462737]
+[node name="BedDresserDouble2" type="StaticBody3D" parent="Map/Props" index="8" unique_id=1644462737]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.547694, 0, -4.134508)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/BedDresserDouble2" index="0" unique_id=988811056]
@@ -1463,7 +1317,7 @@ mesh = ExtResource("7_d1swa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41070557, 0.47001648, 0.0032958984)
 shape = SubResource("BoxShape3D_ao4h1")
 
-[node name="Mirror" type="StaticBody3D" parent="Map/Props" index="10" unique_id=630515570]
+[node name="Mirror" type="StaticBody3D" parent="Map/Props" index="9" unique_id=630515570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6661005, 0.9653286, 5.0706716)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Mirror" index="0" unique_id=468233413]
@@ -1474,7 +1328,7 @@ mesh = ExtResource("8_lmdar")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0020751953, 0.5407715, -0.38879395)
 shape = SubResource("BoxShape3D_lmdar")
 
-[node name="Mirror2" type="StaticBody3D" parent="Map/Props" index="11" unique_id=1699451216]
+[node name="Mirror2" type="StaticBody3D" parent="Map/Props" index="10" unique_id=1699451216]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.615605, 0.9438268, -3.497177)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Mirror2" index="0" unique_id=1756031766]
@@ -1485,7 +1339,7 @@ mesh = ExtResource("8_lmdar")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0020751953, 0.5407715, -0.38879395)
 shape = SubResource("BoxShape3D_lmdar")
 
-[node name="BathroomSink" type="StaticBody3D" parent="Map/Props" index="12" unique_id=2019691854]
+[node name="BathroomSink" type="StaticBody3D" parent="Map/Props" index="11" unique_id=2019691854]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.481286, 0, 10.571745)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/BathroomSink" index="0" unique_id=1314241967]
@@ -1496,7 +1350,7 @@ mesh = ExtResource("9_d1swa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5051727, -0.040100098)
 shape = SubResource("BoxShape3D_ngp1c")
 
-[node name="Sofa" type="Node3D" parent="Map/Props" index="13" unique_id=764440011]
+[node name="Sofa" type="Node3D" parent="Map/Props" index="12" unique_id=764440011]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.589623, 0, 7.841996)
 
 [node name="Sofa1" type="StaticBody3D" parent="Map/Props/Sofa" index="0" unique_id=131597291]
@@ -1525,7 +1379,7 @@ mesh = ExtResource("10_u5eb6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Props/Sofa/Sofa3" index="1" unique_id=1420556018]
 shape = SubResource("BoxShape3D_tbiw2")
 
-[node name="TableLivingRoom" type="StaticBody3D" parent="Map/Props" index="14" unique_id=104668001]
+[node name="TableLivingRoom" type="StaticBody3D" parent="Map/Props" index="13" unique_id=104668001]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5328226, 0, 10.922801)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/TableLivingRoom" index="0" unique_id=1144074636]
@@ -1535,7 +1389,7 @@ mesh = ExtResource("12_ngp1c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016113281, 0.38631058, 0.02722168)
 shape = SubResource("BoxShape3D_ab8bd")
 
-[node name="TableLivingRoom2" type="StaticBody3D" parent="Map/Props" index="15" unique_id=1583360705]
+[node name="TableLivingRoom2" type="StaticBody3D" parent="Map/Props" index="14" unique_id=1583360705]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5508459, 0, 7.6487503)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/TableLivingRoom2" index="0" unique_id=83531972]
@@ -1545,11 +1399,11 @@ mesh = ExtResource("13_u5eb6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016113281, 0.37465286, 0.020812988)
 shape = SubResource("BoxShape3D_w5ayf")
 
-[node name="PropLivingRoomTv" type="MeshInstance3D" parent="Map/Props" index="16" unique_id=1552980247]
+[node name="PropLivingRoomTv" type="MeshInstance3D" parent="Map/Props" index="15" unique_id=1552980247]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.409024, 0.7086984, 7.607932)
 mesh = ExtResource("14_tbiw2")
 
-[node name="KitchenCabinet" type="Node3D" parent="Map/Props" index="17" unique_id=1309248031]
+[node name="KitchenCabinet" type="Node3D" parent="Map/Props" index="16" unique_id=1309248031]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.37448, 0, -7.099559)
 
 [node name="Cabinet1" type="StaticBody3D" parent="Map/Props/KitchenCabinet" index="0" unique_id=197582248]
@@ -1571,7 +1425,7 @@ mesh = ExtResource("16_w5ayf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49445343, -0.077697754)
 shape = SubResource("BoxShape3D_458el")
 
-[node name="KitchenSink" type="StaticBody3D" parent="Map/Props" index="18" unique_id=224616271]
+[node name="KitchenSink" type="StaticBody3D" parent="Map/Props" index="17" unique_id=224616271]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.37063, 0, -5.6310744)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/KitchenSink" index="0" unique_id=1501860553]
@@ -1581,18 +1435,85 @@ mesh = ExtResource("17_ya3ly")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50083923, -0.073791504)
 shape = SubResource("BoxShape3D_ok1eh")
 
-[node name="StructureKitchenCabinetWallFull" type="MeshInstance3D" parent="Map/Props" index="19" unique_id=1887878639]
+[node name="StructureKitchenCabinetWallFull" type="MeshInstance3D" parent="Map/Props" index="18" unique_id=1887878639]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.238755, -0.22181344, -10.632849)
 mesh = ExtResource("18_ok1eh")
 
-[node name="StructureKitchenCabinetWallFull2" type="MeshInstance3D" parent="Map/Props" index="20" unique_id=1548515506]
+[node name="StructureKitchenCabinetWallFull2" type="MeshInstance3D" parent="Map/Props" index="19" unique_id=1548515506]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.238755, -0.22181344, -3.459538)
 mesh = ExtResource("18_ok1eh")
 
-[node name="StructureKitchenCabinetWallOpen" type="MeshInstance3D" parent="Map/Props" index="21" unique_id=1240895676]
+[node name="StructureKitchenCabinetWallOpen" type="MeshInstance3D" parent="Map/Props" index="20" unique_id=1240895676]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.222379, -0.23818171, -9.5477915)
 mesh = ExtResource("19_rl2o4")
 
-[node name="StructureKitchenCabinetWallOpen2" type="MeshInstance3D" parent="Map/Props" index="22" unique_id=460013640]
+[node name="StructureKitchenCabinetWallOpen2" type="MeshInstance3D" parent="Map/Props" index="21" unique_id=460013640]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.222379, -0.23818171, -4.5556054)
 mesh = ExtResource("19_rl2o4")
+
+[node name="DiningTable" type="StaticBody3D" parent="Map/Props" index="22" unique_id=114227758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9460917, 0, -6.488332)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/DiningTable" index="0" unique_id=1614296310]
+mesh = ExtResource("20_rsd5h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Props/DiningTable" index="1" unique_id=1230021546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01619339, 0.47920227, 0.07867432)
+shape = SubResource("BoxShape3D_gyiht")
+
+[node name="Chair" type="StaticBody3D" parent="Map/Props" index="23" unique_id=1190937658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5344367, 0, -7.5194383)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Chair" index="0" unique_id=2085745960]
+mesh = ExtResource("21_tbesk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Props/Chair" index="1" unique_id=803898531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031559646, 0.26081848, 0.005355835)
+shape = SubResource("BoxShape3D_4ljym")
+
+[node name="Chair2" type="StaticBody3D" parent="Map/Props" index="24" unique_id=1999986179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.588707, 0, -7.5194383)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Chair2" index="0" unique_id=1859035360]
+mesh = ExtResource("21_tbesk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Props/Chair2" index="1" unique_id=241356698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031559646, 0.26081848, 0.005355835)
+shape = SubResource("BoxShape3D_4ljym")
+
+[node name="Chair3" type="StaticBody3D" parent="Map/Props" index="25" unique_id=738518058]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.588707, 0, -5.6542897)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Chair3" index="0" unique_id=1138236121]
+mesh = ExtResource("21_tbesk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Props/Chair3" index="1" unique_id=1742291381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031559646, 0.26081848, 0.005355835)
+shape = SubResource("BoxShape3D_4ljym")
+
+[node name="Chair4" type="StaticBody3D" parent="Map/Props" index="26" unique_id=184846446]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.6727104, 0, -5.6542897)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Props/Chair4" index="0" unique_id=244231898]
+mesh = ExtResource("21_tbesk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Props/Chair4" index="1" unique_id=1469456718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031559646, 0.26081848, 0.005355835)
+shape = SubResource("BoxShape3D_4ljym")
+
+[node name="Doors" type="Node3D" parent="Map" parent_id_path=PackedInt32Array(1953703160) index="3" unique_id=413881800]
+
+[node name="Door" parent="Map/Doors" index="0" unique_id=1653197861 instance=ExtResource("22_tbesk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.0295434, 0, 3.4773996)
+
+[node name="Door2" parent="Map/Doors" index="1" unique_id=732446056 instance=ExtResource("22_tbesk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5436773, 0, 4.5225897)
+
+[node name="Door3" parent="Map/Doors" index="2" unique_id=183882459 instance=ExtResource("22_tbesk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.521061, 0, 4.5225897)
+
+[node name="Door4" parent="Map/Doors" index="3" unique_id=25681939 instance=ExtResource("22_tbesk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.521061, 0, -2.523909)
+
+[node name="Door5" parent="Map/Doors" index="4" unique_id=983025084 instance=ExtResource("22_tbesk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5069563, 0, -2.523909)

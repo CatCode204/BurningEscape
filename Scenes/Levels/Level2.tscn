@@ -1,0 +1,397 @@
+[gd_scene format=3 uid="uid://bs8ty2xnpi6ni"]
+
+[sub_resource type="StandardMaterial3D" id="MatFloor"]
+albedo_color = Color(0.92, 0.92, 0.88, 1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_Unit"]
+
+[sub_resource type="StandardMaterial3D" id="MatWall"]
+roughness = 0.75
+
+[sub_resource type="StandardMaterial3D" id="MatWindow"]
+transparency = 1
+albedo_color = Color(0.05, 0.35, 0.9, 0.7)
+roughness = 0.2
+
+[sub_resource type="StandardMaterial3D" id="MatDoor"]
+albedo_color = Color(0.45, 0.26, 0.12, 1)
+roughness = 0.65
+
+[sub_resource type="StandardMaterial3D" id="MatCeiling"]
+albedo_color = Color(0.72, 0.72, 0.72, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="MatRoof"]
+albedo_color = Color(0.08, 0.08, 0.08, 1)
+roughness = 0.85
+
+[node name="Level2" type="Node3D" unique_id=696962587]
+
+[node name="House_NoRoof_DebugView" type="Node3D" parent="." unique_id=232357736]
+
+[node name="Floor" type="Node3D" parent="House_NoRoof_DebugView" unique_id=301550138]
+
+[node name="Floor_28m_x_23m" type="MeshInstance3D" parent="House_NoRoof_DebugView/Floor" unique_id=588606291]
+transform = Transform3D(28, 0, 0, 0, 0.1, 0, 0, 0, 23, 0, -0.05, 0)
+material_override = SubResource("MatFloor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Walls" type="Node3D" parent="House_NoRoof_DebugView" unique_id=2048641574]
+
+[node name="Outer_North_Left_Of_Bedroom1_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1598441514]
+transform = Transform3D(3.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -12.25, 1.5, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bedroom1_North_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=2058835439]
+transform = Transform3D(3, 0, 0, 0, 1.2, 0, 0, 0, 0.2, -9, 0.6, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bedroom1_North_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=2029543416]
+transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, -9, 2.7, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_North_Between_Bedroom1_And_Bath_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1323997452]
+transform = Transform3D(5, 0, 0, 0, 3, 0, 0, 0, 0.2, -5, 1.5, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bath_North_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1087380351]
+transform = Transform3D(3, 0, 0, 0, 1.2, 0, 0, 0, 0.2, -1, 0.6, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bath_North_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1369147413]
+transform = Transform3D(3, 0, 0, 0, 0.6, 0, 0, 0, 0.2, -1, 2.7, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_North_Between_Bath_And_Kitchen_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=758397764]
+transform = Transform3D(4.5, 0, 0, 0, 3, 0, 0, 0, 0.2, 2.75, 1.5, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Kitchen_North_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1261016679]
+transform = Transform3D(5, 0, 0, 0, 1.2, 0, 0, 0, 0.2, 7.5, 0.6, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Kitchen_North_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=59121728]
+transform = Transform3D(5, 0, 0, 0, 0.6, 0, 0, 0, 0.2, 7.5, 2.7, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_North_Right_Of_Kitchen_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=979301909]
+transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 0.2, 12, 1.5, 11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_South_Left_Of_Garage_Door" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=656592718]
+transform = Transform3D(1.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -13.25, 1.5, -11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_South_Between_Garage_And_Main_Entrance" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=698586354]
+transform = Transform3D(14.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -0.25, 1.5, -11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_South_Right_Of_Main_Entrance" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=467240346]
+transform = Transform3D(2, 0, 0, 0, 3, 0, 0, 0, 0.2, 13, 1.5, -11.4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_West_Below_Garage_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=2002499709]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 1, -13.9, 1.5, -11)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Garage_West_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1692554581]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 2, -13.9, 0.6, -9.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Garage_West_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=2105802591]
+transform = Transform3D(0.2, 0, 0, 0, 0.6, 0, 0, 0, 2, -13.9, 2.7, -9.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_West_Between_Garage_And_Bedroom2_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1535803118]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 2.5, -13.9, 1.5, -7.25)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bedroom2_West_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1272161204]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 2, -13.9, 0.6, -5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bedroom2_West_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=130416949]
+transform = Transform3D(0.2, 0, 0, 0, 0.6, 0, 0, 0, 2, -13.9, 2.7, -5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_West_Between_Bedroom2_And_MainHall_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=418511299]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 3.5, -13.9, 1.5, -2.25)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_MainHall_West_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=84880968]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 3, -13.9, 0.6, 1)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_MainHall_West_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1685571705]
+transform = Transform3D(0.2, 0, 0, 0, 0.6, 0, 0, 0, 3, -13.9, 2.7, 1)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_West_Above_MainHall_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=791196979]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 9, -13.9, 1.5, 7)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_East_Below_Living_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1790255706]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 3, 13.9, 1.5, -10)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Living_East_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1707900283]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 4, 13.9, 0.6, -6.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Living_East_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=978892981]
+transform = Transform3D(0.2, 0, 0, 0, 0.6, 0, 0, 0, 4, 13.9, 2.7, -6.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_East_Between_Living_And_Kitchen_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1207613334]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 10, 13.9, 1.5, 0.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Kitchen_East_Lower_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=722948513]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 4, 13.9, 0.6, 7.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Kitchen_East_Upper_Wall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=931075213]
+transform = Transform3D(0.2, 0, 0, 0, 0.6, 0, 0, 0, 4, 13.9, 2.7, 7.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Outer_East_Above_Kitchen_Window" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1811673237]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 2, 13.9, 1.5, 10.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_X10_Garage_Door_Lower_Piece" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=767628719]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 0.5, -4, 1.5, -11.25)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_X10_Garage_Upper_To_Bedroom2" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=801860814]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 5.5, -4, 1.5, -5.25)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_X10_Bedroom1_Bath" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=356693153]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 7, -4, 1.5, 8)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_X16_Hall_Kitchen_Door_Lower" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=264791827]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 1, 2, 1.5, -2)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_X16_Hall_Kitchen_Door_Upper" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=965618826]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 1, 2, 1.5, 4)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_X16_Bath_Kitchen" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1419325434]
+transform = Transform3D(0.2, 0, 0, 0, 3, 0, 0, 0, 7, 2, 1.5, 8)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y16_Bedroom1_Left" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1330208177]
+transform = Transform3D(2.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -12.75, 1.5, 4.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y16_Bedroom1_Right" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=540094920]
+transform = Transform3D(2.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -5.25, 1.5, 4.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y16_Bath_Left" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1157613045]
+transform = Transform3D(0.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -3.75, 1.5, 4.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y16_Bath_Right" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=784149952]
+transform = Transform3D(0.5, 0, 0, 0, 3, 0, 0, 0, 0.2, 1.75, 1.5, 4.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y9_Bedroom2_Left" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=555320103]
+transform = Transform3D(2.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -12.75, 1.5, -2.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y9_Bedroom2_Right" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=2001057318]
+transform = Transform3D(2.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -5.25, 1.5, -2.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y9_Living_Door_Left" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1346363281]
+transform = Transform3D(0.5, 0, 0, 0, 3, 0, 0, 0, 0.2, -3.75, 1.5, -2.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y9_Living_Door_Right" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=2086723342]
+transform = Transform3D(0.5, 0, 0, 0, 3, 0, 0, 0, 0.2, 1.75, 1.5, -2.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y9_Kitchen_Living_Separator" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1454450821]
+transform = Transform3D(12, 0, 0, 0, 3, 0, 0, 0, 0.2, 8, 1.5, -2.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Inner_Y4_Bedroom2_Garage" type="MeshInstance3D" parent="House_NoRoof_DebugView/Walls" unique_id=1692930139]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 0.2, -9, 1.5, -7.5)
+material_override = SubResource("MatWall")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Windows" type="Node3D" parent="House_NoRoof_DebugView" unique_id=1152700555]
+
+[node name="Window_Bedroom1_North_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=2132780085]
+transform = Transform3D(3, 0, 0, 0, 1.2, 0, 0, 0, 0.2, -9, 1.8, 11.4)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bath_North_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=1643010566]
+transform = Transform3D(3, 0, 0, 0, 1.2, 0, 0, 0, 0.2, -1, 1.8, 11.4)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Kitchen_North_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=313330629]
+transform = Transform3D(5, 0, 0, 0, 1.2, 0, 0, 0, 0.2, 7.5, 1.8, 11.4)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Garage_West_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=1048503096]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 2, -13.9, 1.8, -9.5)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Bedroom2_West_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=1050192406]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 2, -13.9, 1.8, -5)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_MainHall_West_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=238279745]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 3, -13.9, 1.8, 1)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Living_East_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=1402640822]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 4, 13.9, 1.8, -6.5)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Window_Kitchen_East_Glass" type="MeshInstance3D" parent="House_NoRoof_DebugView/Windows" unique_id=111652058]
+transform = Transform3D(0.2, 0, 0, 0, 1.2, 0, 0, 0, 4, 13.9, 1.8, 7.5)
+material_override = SubResource("MatWindow")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Doors" type="Node3D" parent="House_NoRoof_DebugView" unique_id=1405813520]
+
+[node name="Door_Bedroom1_To_MainHall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=1430751547]
+transform = Transform3D(5, 0, 0, 0, 2.4, 0, 0, 0, 0.16, -9, 1.2, 4.5)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Door_BathStore_To_MainHall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=1949916426]
+transform = Transform3D(5, 0, 0, 0, 2.4, 0, 0, 0, 0.16, -1, 1.2, 4.5)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Door_Kitchen_To_MainHall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=1943869247]
+transform = Transform3D(0.16, 0, 0, 0, 2.4, 0, 0, 0, 5, 2, 1.2, 1)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Door_Bedroom2_To_MainHall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=620307575]
+transform = Transform3D(5, 0, 0, 0, 2.4, 0, 0, 0, 0.16, -9, 1.2, -2.5)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Door_Living_To_MainHall" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=1418597995]
+transform = Transform3D(5, 0, 0, 0, 2.4, 0, 0, 0, 0.16, -1, 1.2, -2.5)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Door_Garage_To_Living" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=1194105408]
+transform = Transform3D(0.16, 0, 0, 0, 2.4, 0, 0, 0, 3, -4, 1.2, -10)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Door_Garage_Outer" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=1153606999]
+transform = Transform3D(5, 0, 0, 0, 2.4, 0, 0, 0, 0.16, -10, 1.2, -11.4)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Door_Main_Entrance" type="MeshInstance3D" parent="House_NoRoof_DebugView/Doors" unique_id=1225052092]
+transform = Transform3D(5, 0, 0, 0, 2.4, 0, 0, 0, 0.16, 9.5, 1.2, -11.4)
+material_override = SubResource("MatDoor")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof" type="Node3D" parent="." unique_id=1964881424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.560307, 0, 0)
+
+[node name="Roof_Ceiling_Rectangle_28x23" type="MeshInstance3D" parent="Roof" unique_id=1088237052]
+transform = Transform3D(29, 0, 0, 0, 0.18, 0, 0, 0, 24, 0, 3.05, 0)
+material_override = SubResource("MatCeiling")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof_Left_Slope" type="MeshInstance3D" parent="Roof" unique_id=1033084809]
+transform = Transform3D(29.5, 0, 0, 0, 0.17465323, 3.2659457, 0, -0.043545943, 13.098992, 0, 4.05, -5.7)
+material_override = SubResource("MatRoof")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof_Right_Slope" type="MeshInstance3D" parent="Roof" unique_id=1716125667]
+transform = Transform3D(29.5, 0, 0, 0, 0.17465323, -3.2659457, 0, 0.043545943, 13.098992, 0, 4.05, 5.7)
+material_override = SubResource("MatRoof")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof_Ridge" type="MeshInstance3D" parent="Roof" unique_id=1296958461]
+transform = Transform3D(29.5, 0, 0, 0, 0.28, 0, 0, 0, 0.35, 0, 5.6, 0)
+material_override = SubResource("MatRoof")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof_Front_Eave" type="MeshInstance3D" parent="Roof" unique_id=1921568154]
+transform = Transform3D(30, 0, 0, 0, 0.2, 0, 0, 0, 0.5, 0, 3.25, -12.25)
+material_override = SubResource("MatRoof")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof_Back_Eave" type="MeshInstance3D" parent="Roof" unique_id=202226836]
+transform = Transform3D(30, 0, 0, 0, 0.2, 0, 0, 0, 0.5, 0, 3.25, 12.25)
+material_override = SubResource("MatRoof")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof_Left_Eave" type="MeshInstance3D" parent="Roof" unique_id=1559813867]
+transform = Transform3D(0.5, 0, 0, 0, 0.2, 0, 0, 0, 24.5, -14.75, 3.25, 0)
+material_override = SubResource("MatRoof")
+mesh = SubResource("BoxMesh_Unit")
+
+[node name="Roof_Right_Eave" type="MeshInstance3D" parent="Roof" unique_id=2089234540]
+transform = Transform3D(0.5, 0, 0, 0, 0.2, 0, 0, 0, 24.5, 14.75, 3.25, 0)
+material_override = SubResource("MatRoof")
+mesh = SubResource("BoxMesh_Unit")
